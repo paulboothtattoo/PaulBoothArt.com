@@ -72,7 +72,7 @@
     videoGrid.append(article);
   });
 
-  const dialog=qs('#project-dialog'),visual=qs('.dialog-visual'),dimg=qs('.dialog-image'),dvideo=qs('.dialog-video'),dyoutube=qs('.dialog-youtube'),dyoutubeFallback=qs('.dialog-youtube-fallback'),dyoutubeFallbackPoster=qs('.youtube-fallback-poster'),dyoutubeFallbackLink=qs('.youtube-fallback-link'),dtype=qs('.dialog-type'),dtitle=qs('.dialog-title'),ddesc=qs('.dialog-description'),dmail=qs('.dialog-email'),doriginal=qs('.dialog-original'),dzoom=qs('.dialog-zoom');
+  const dialog=qs('#project-dialog'),visual=qs('.dialog-visual'),dimg=qs('.dialog-image'),dvideo=qs('.dialog-video'),dyoutube=qs('.dialog-youtube'),dyoutubeFallback=qs('.dialog-youtube-fallback'),dyoutubeFallbackPoster=qs('.youtube-fallback-poster'),dyoutubeFallbackLink=qs('.youtube-fallback-link'),dtype=qs('.dialog-type'),dtitle=qs('.dialog-title'),ddesc=qs('.dialog-description'),dmail=qs('.dialog-email'),dzoom=qs('.dialog-zoom');
   let current=null;
   function resetZoom(){visual.classList.remove('zoomed');dzoom.textContent='View actual size'}
   function openWork(id){
@@ -91,7 +91,7 @@
         dyoutube.hidden=false;dyoutube.src=youtubeEmbedUrl(w,true);
       }
     }
-    else{dimg.src=w.image;dimg.alt=w.alt||w.title;doriginal.href=w.image;doriginal.innerHTML='Open original <span>↗</span>'}
+    else{dimg.src=w.image;dimg.alt=w.alt||w.title}
     dtype.textContent=labels[w.category]||w.medium;dtitle.textContent=w.title;ddesc.textContent=w.description||w.medium;
     dmail.href=`mailto:lastritestattoo@gmail.com?subject=${encodeURIComponent('Inquiry: '+w.title)}`;
     dialog.showModal();
