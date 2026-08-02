@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PaulBoothArt.com — fine art, tattoo, sculpture, jewelry, video art, and dark surrealism by Paul Booth." />
+  <meta name="theme-color" content="#070706" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>PaulBoothArt.com — Fine Arts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Oxanium:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css?v=20260729-larger-header" />
+  <style id="paulboothart-larger-header">
+    .site-header {
+      min-height: 88px;
+      padding: 0 42px;
+      gap: 28px;
+    }
+
+    .mini-brand {
+      gap: 14px;
+      font-size: 15px;
+      letter-spacing: .16em;
+    }
+
+    .mini-brand-mark {
+      width: 48px;
+      height: 48px;
+      font-size: 15px;
+    }
+
+    .desktop-nav {
+      gap: clamp(18px, 2vw, 34px);
+    }
+
+    .desktop-nav a {
+      font-size: 13px;
+    }
+
+    .header-cta {
+      min-height: 46px;
+      padding: 0 20px;
+      font-size: 12px;
+    }
+
+    .menu-button {
+      width: 48px;
+      height: 48px;
+    }
+
+    @media (max-width: 1100px) {
+      .site-header {
+        min-height: 80px;
+        padding: 0 26px;
+        gap: 18px;
+      }
+
+      .desktop-nav {
+        gap: 15px;
+      }
+
+      .desktop-nav a {
+        font-size: 11px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .site-header {
+        min-height: 76px;
+        padding: 0 18px;
+      }
+
+      .mini-brand {
+        font-size: 12px;
+      }
+
+      .mini-brand-mark {
+        width: 42px;
+        height: 42px;
+      }
+    }
+
+    .sister-site-actions {
+      justify-self: end;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sister-site-actions .header-cta {
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(52, 38, 25, .92), rgba(8, 9, 9, .98));
+      box-shadow:
+        inset 0 1px 0 rgba(255, 239, 207, .08),
+        0 8px 24px rgba(0, 0, 0, .36);
+    }
+
+    .sister-site-actions .header-cta::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        110deg,
+        transparent 18%,
+        rgba(255, 232, 191, .14) 44%,
+        transparent 68%
+      );
+      transform: translateX(-130%);
+      transition: transform .55s ease;
+    }
+
+    .sister-site-actions .header-cta:hover::before,
+    .sister-site-actions .header-cta:focus-visible::before {
+      transform: translateX(130%);
+    }
+
+    .sister-site-actions .header-cta:hover,
+    .sister-site-actions .header-cta:focus-visible {
+      color: #fff7e8;
+      border-color: #b38c51;
+      transform: translateY(-1px);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 239, 207, .12),
+        0 0 24px rgba(179, 140, 81, .16),
+        0 10px 28px rgba(0, 0, 0, .48);
+      outline: none;
+    }
+
+    @media (max-width: 1180px) {
+      .sister-site-actions {
+        gap: 7px;
+      }
+
+      .sister-site-actions .header-cta {
+        min-height: 42px;
+        padding: 0 14px;
+        font-size: 10px;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .sister-site-actions {
+        display: none;
+      }
+    }
+
+  </style>
+
+</head>
+<body>
+  <div class="fixed-site-background" aria-hidden="true"></div>
+  <div class="fixed-site-shade" aria-hidden="true"></div>
+  <div class="page-noise" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="mini-brand" href="#top" aria-label="PaulBoothArt.com home">
+      <span class="mini-brand-mark">PB</span>
+      <span>PAULBOOTHART.COM</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#fine-art">Fine Arts</a>
+      <a href="#tattoo-art">Tattoo Art</a>
+      <a href="#video-art">Video Art</a>
+      <a href="#objects">Objects</a>
+      <a href="#about">About</a>
+      <a href="#appointment">Appointments</a>
+    </nav>
+    <div class="sister-site-actions" aria-label="Sister sites">
+      <a class="header-cta" href="https://paulbooth.ai/" target="_blank" rel="noopener noreferrer">PaulBooth.ai <span>↗</span></a>
+      <a class="header-cta" href="https://paulboothbrand.com/" target="_blank" rel="noopener noreferrer">PaulBoothBrand.com <span>↗</span></a>
+    </div>
+    <button class="menu-button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </header>
+
+  <div class="mobile-panel" aria-hidden="true">
+    <a href="#fine-art">Fine Arts</a><a href="#tattoo-art">Tattoo Art</a><a href="#video-art">Video Art</a><a href="#objects">3D & Jewelry</a><a href="#about">About Paul Booth</a><a href="#appointment">Tattoo Appointments</a><a href="https://paulbooth.ai/" target="_blank" rel="noopener noreferrer">Open PaulBooth.ai ↗</a><a href="https://paulboothbrand.com/" target="_blank" rel="noopener noreferrer">Open PaulBoothBrand.com ↗</a>
+  </div>
+
+  <main>
+    <section class="hero section-shell" id="hero-animation">
+      <div class="hero-vignette" aria-hidden="true"></div><canvas class="hero-particles" aria-hidden="true"></canvas><canvas class="hero-static" aria-hidden="true"></canvas><div class="hero-scanlines" aria-hidden="true"></div>
+      <div class="hero-logo-stage hero-logo-stage--sigil" aria-label="Paul Booth Art">
+        <div class="hero-red-flicker" aria-hidden="true"></div>
+        <div class="hero-logo-orbit hero-logo-orbit--far" aria-hidden="true"></div>
+        <div class="hero-logo-orbit hero-logo-orbit--outer" aria-hidden="true"></div>
+        <div class="hero-logo-orbit hero-logo-orbit--mid" aria-hidden="true"></div>
+        <div class="hero-logo-orbit hero-logo-orbit--inner" aria-hidden="true"></div>
+        <div class="hero-orbital-nodes hero-orbital-nodes--one" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <div class="hero-orbital-nodes hero-orbital-nodes--two" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="hero-orbital-nodes hero-orbital-nodes--three" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="hero-logo-aura" aria-hidden="true"></div>
+        <div class="hero-logo-plinth" aria-hidden="true"></div>
+        <div class="hero-medallion" aria-label="Paul Booth skull emblem">
+          <div class="hero-medallion-depth" aria-hidden="true"></div>
+          <div class="hero-medallion-rim" aria-hidden="true"></div>
+          <img class="hero-medallion-face" src="assets/hero-logo-requested-exact.png" alt="Paul Booth skull emblem" />
+          <div class="hero-medallion-glass" aria-hidden="true"></div>
+        </div>
+        <div class="hero-logo-sweep" aria-hidden="true"></div>
+      </div>
+      <div class="hero-title"><span>PAUL BOOTH</span><strong>FINE ARTS</strong></div>
+      <div class="hero-content"><p class="hero-manifesto">Dark Surrealism. <span>Tattoo Legacy.</span> Objects of Devotion.</p><a class="primary-button" href="#fine-art">Explore Fine Arts <span>→</span></a></div>
+      <div class="hero-status" aria-hidden="true"><span>FINE ARTS NODE 01</span><span class="status-line"></span><span>ONLINE</span></div>
+    </section>
+
+    <section class="realms section-shell" aria-labelledby="realms-title"><div class="section-heading reveal"><span class="eyebrow">Navigation Matrix</span><h2 id="realms-title">Explore the Realms</h2></div><div id="realm-grid" class="realm-grid"></div></section>
+
+    <section id="fine-art" class="archive section-shell" aria-labelledby="fine-art-title">
+      <div class="section-heading reveal split-heading"><div><span class="eyebrow">Paintings / Drawings / Mixed Media</span><h2 id="fine-art-title">Fine Arts</h2></div><p id="fine-art-count">112 works and films cataloged</p></div>
+      <p class="collection-intro reveal">Dark surrealist works formed from psychological pressure, ritual symbolism, organic distortion, and the confrontation of the human shadow. Explore the complete collection below.</p>
+      <div class="filter-bar reveal" role="group" aria-label="Fine arts collection categories"><button class="filter active" data-filter="all">All Works</button><button class="filter" data-filter="fine-art">Paintings & Drawings</button><button class="filter" data-filter="tattoo">Tattoo Art</button><button class="filter" data-filter="video">Video Art</button><button class="filter" data-filter="3d">3D Design</button><button class="filter" data-filter="jewelry">Jewelry</button></div>
+      <div id="project-grid" class="project-grid"></div><button id="load-more" class="secondary-button load-more" type="button">Load more works <span>＋</span></button>
+    </section>
+
+
+    <section id="tattoo-art" class="motion section-shell"><div class="section-heading reveal"><span class="eyebrow">Skin / Ritual / Transformation</span><h2>Tattoo Art</h2></div><div class="motion-stage reveal"><button class="motion-screen tattoo-feature" data-open-id="tattoo-001" aria-label="Open featured tattoo"><img src="https://images.squarespace-cdn.com/content/v1/62aa5e7406225f7479744177/243f29ed-ddae-467a-ad74-b7d21cde00f1/IMG_9975.jpg" alt="Featured Paul Booth tattoo" /><div class="screen-core"></div><span class="motion-project-play">＋</span><span class="screen-label">FEATURED TATTOO WORK</span></button><div class="motion-copy"><p class="counter">01 / LEGACY</p><span class="eyebrow">Freehand / Black & Grey / Large Scale</span><h3>A Living Canvas</h3><p>Paul Booth's tattoo work merges anatomy, biomechanical form, psychological darkness, and the individual shape of the body into singular, site-specific compositions.</p><button class="text-link filter-jump" data-jump="tattoo">View tattoo works <span>→</span></button></div></div></section>
+
+    <section id="video-art" class="video-art section-shell" aria-labelledby="video-title">
+      <div class="section-heading reveal split-heading"><div><span class="eyebrow">Film / Motion / Moving Image</span><h2 id="video-title">Video Art</h2></div><p>The Video Art section presents seven selected YouTube works in the same cinematic visual system as the Fine Arts collection.</p></div>
+      <div id="video-grid" class="video-grid"></div>
+    </section>
+
+    <section id="objects" class="machines section-shell"><div class="section-heading reveal split-heading"><div><span class="eyebrow">Sculpture / Wearable Objects</span><h2>Objects & Artifacts</h2></div><p>Three-dimensional forms, jewelry, sculptural objects, and Ritean artifacts extending the visual language beyond canvas and skin.</p></div><div id="object-grid" class="machine-grid"></div></section>
+
+    <section id="about" class="about section-shell reveal"><div class="about-photo-frame"><img src="https://images.squarespace-cdn.com/content/v1/62aa5e7406225f7479744177/2af12a90-68fa-4549-b030-770d4bb6e01b/PB_headshot01.jpg" alt="Paul Booth portrait" /><span class="photo-index">PB / 001</span></div><div class="about-copy"><span class="eyebrow">About Paul Booth</span><h2>Artist. Tattooist. Sculptor. Filmmaker.</h2><p class="lead">Nearly four decades at the crossroads of dark surrealism, gothic artistry, and countercultural defiance.</p><p>Paul Booth has forged a singular visual language that explores the macabre, the psychological, and the taboo. His work across canvas, skin, sculpture, film, music, and immersive environments confronts the shadowed recesses of the human condition.</p><details><summary>Read the full biography</summary><p>Booth's early work emerged from a deeply personal need to give form to internal chaos. In the 1990s his visceral aesthetic reached the cultural mainstream through tattoo work for major figures in heavy music and performance. His Last Rites Tattoo Theatre & Gallery became a three-story Gothic landmark in Manhattan and a physical portal into his imagination. His work has since been exhibited internationally and featured across major publications, while the Last Rites world expanded into fashion, jewelry, home décor, film, and music.</p></details></div><div class="about-reliquary" aria-hidden="true"><div class="reliquary-figure"></div></div></section>
+
+    <section id="appointment" class="appointment section-shell"><div class="section-heading reveal split-heading"><div><span class="eyebrow">Tattoo Appointment Protocol</span><h2>Book a Tattoo</h2></div><p>Paul currently works in New Jersey, approximately 35 minutes west of midtown Manhattan.</p></div><div class="appointment-grid"><article class="protocol-card reveal"><span>01</span><h3>Send the Concept</h3><p>Email your idea or theme, a photo of the area to be tattooed, and any budgetary information.</p></article><article class="protocol-card reveal"><span>02</span><h3>Freehand Interpretation</h3><p>Paul works mainly freehand and develops your ideas through his own visual interpretation.</p></article><article class="protocol-card reveal"><span>03</span><h3>Reserve the Session</h3><p>A $500 deposit holds the appointment and is applied toward the tattoo. Cancellations or rescheduling require 48 hours' notice.</p></article><article class="protocol-card reveal"><span>04</span><h3>Travel & Timing</h3><p>Newark Liberty International Airport (EWR) is the closest airport. Large-scale work can move quickly; a back piece may be completed in 8–10 hours.</p></article></div><a class="primary-button appointment-cta" href="mailto:lastritestattoo@gmail.com?subject=Tattoo%20Appointment%20Inquiry">Start an appointment inquiry <span>→</span></a></section>
+
+    <section id="contact" class="signal section-shell reveal"><div><span class="eyebrow">Contact Channel</span><h2>Enter the Conversation</h2><p>Original artwork, exhibitions, tattoo projects, licensing, press, and collaborations.</p></div><div class="signal-actions"><a href="mailto:lastritestattoo@gmail.com" class="secondary-button">Email Last Rites <span>→</span></a><a href="https://www.instagram.com/paulbooth.ai/" target="_blank" rel="noopener noreferrer" class="secondary-button">Instagram <span>↗</span></a><a href="https://www.youtube.com/@paulboothart" target="_blank" rel="noopener noreferrer" class="secondary-button">YouTube <span>↗</span></a></div></section>
+  </main>
+
+  <footer class="site-footer section-shell"><div class="footer-brand"><span class="mini-brand-mark">PB</span><div><strong>PAULBOOTHART.COM</strong><p>Fine art. Tattoo legacy. Dark surrealism.</p></div></div><div class="footer-links"><div><span>Collections</span><a href="#fine-art">Fine Arts</a><a href="#tattoo-art">Tattoo Art</a><a href="#video-art">Video Art</a><a href="#objects">Objects</a></div><div><span>Information</span><a href="#about">About</a><a href="#appointment">Appointments</a><a href="#contact">Contact</a></div><div><span>Sister Site</span><a href="https://paulbooth.ai/" target="_blank" rel="noopener noreferrer">PaulBooth.ai ↗</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> Paul Booth. All rights reserved.</span><span>PaulBoothArt.com</span></div></footer>
+
+  <dialog class="project-dialog" id="project-dialog">
+    <button class="dialog-close" aria-label="Close artwork">×</button>
+    <div class="dialog-visual">
+      <img class="dialog-image" alt="" />
+      <video class="dialog-video" controls playsinline preload="metadata"></video>
+      <iframe class="dialog-youtube" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="dialog-youtube-fallback" hidden>
+        <img class="youtube-fallback-poster" alt="" />
+        <div class="youtube-fallback-copy">
+          <span class="eyebrow">LOCAL PREVIEW MODE</span>
+          <h3>YouTube playback needs a web address</h3>
+          <p>Run <strong>START-PREVIEW.bat</strong> and open the site at <strong>http://localhost:8080</strong>, or watch this work directly on YouTube.</p>
+          <a class="primary-button youtube-fallback-link" target="_blank" rel="noopener noreferrer">Watch on YouTube <span>↗</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="dialog-copy">
+      <div class="dialog-details"><span class="eyebrow dialog-type"></span><h2 class="dialog-title"></h2><p class="dialog-description"></p></div>
+      <div class="dialog-actions"><button class="secondary-button dialog-zoom" type="button">View actual size</button><a class="secondary-button dialog-original" target="_blank" rel="noopener noreferrer">Open original <span>↗</span></a><a class="secondary-button dialog-email" href="mailto:lastritestattoo@gmail.com">Inquire <span>→</span></a></div>
+    </div>
+  </dialog>
+  <script src="content.js"></script><script src="script.js?v=20260729-logo-background-clean"></script>
+</body></html>

@@ -1,0 +1,11 @@
+﻿{
+    "runAt":  "2026-08-02T12:38:34.6600469-04:00",
+    "expectedSquarespaceImages":  106,
+    "localImageFiles":  106,
+    "failedAssets":  0,
+    "remainingSquarespaceReferences":  0,
+    "filesStillContainingSquarespaceReferences":  [
+
+                                                  ],
+    "status":  "PASS - all images are local and Squarespace dependencies are removed"
+}
