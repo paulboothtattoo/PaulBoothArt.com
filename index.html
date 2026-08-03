@@ -9,9 +9,9 @@
   <title>PaulBoothArt.com — Fine Arts</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Oxanium:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Michroma&family=Oxanium:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20260729-larger-header" />
+  <link rel="stylesheet" href="styles.css?v=20260802-luxury-sister-buttons" />
   <link rel="stylesheet" href="image-protection.css?v=20260802" />
   <style id="paulboothart-larger-header">
     .site-header {
@@ -87,60 +87,119 @@
       justify-self: end;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 14px;
     }
 
     .sister-site-actions .header-cta {
       position: relative;
+      isolation: isolate;
       overflow: hidden;
       white-space: nowrap;
+      min-height: 52px;
+      padding: 0 24px;
+      border: 1px solid rgba(190, 142, 72, .78);
       border-radius: 999px;
-      background: linear-gradient(180deg, rgba(52, 38, 25, .92), rgba(8, 9, 9, .98));
+      color: #f3ead9;
+      background:
+        linear-gradient(180deg, rgba(52, 37, 24, .86), rgba(11, 9, 8, .96)),
+        radial-gradient(circle at 50% 0%, rgba(214, 171, 103, .18), transparent 66%);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      text-shadow: 0 1px 12px rgba(255, 235, 198, .16);
       box-shadow:
-        inset 0 1px 0 rgba(255, 239, 207, .08),
-        0 8px 24px rgba(0, 0, 0, .36);
+        inset 0 1px 0 rgba(255, 245, 222, .16),
+        inset 0 -1px 0 rgba(96, 48, 21, .52),
+        0 9px 28px rgba(0, 0, 0, .48),
+        0 0 0 1px rgba(77, 35, 18, .55);
+      transition:
+        transform .28s ease,
+        border-color .28s ease,
+        color .28s ease,
+        box-shadow .28s ease,
+        background .28s ease;
+    }
+
+    .sister-site-actions .header-cta span {
+      position: relative;
+      z-index: 2;
+      margin-left: 10px;
+      color: #d8aa67;
+      font-family: "Oxanium", sans-serif;
+      font-size: 11px;
+      transition: transform .28s ease, color .28s ease;
     }
 
     .sister-site-actions .header-cta::before {
       content: "";
       position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        110deg,
-        transparent 18%,
-        rgba(255, 232, 191, .14) 44%,
-        transparent 68%
-      );
-      transform: translateX(-130%);
-      transition: transform .55s ease;
+      inset: 3px;
+      z-index: -1;
+      border: 1px solid rgba(245, 216, 165, .09);
+      border-radius: inherit;
+      pointer-events: none;
     }
 
-    .sister-site-actions .header-cta:hover::before,
-    .sister-site-actions .header-cta:focus-visible::before {
-      transform: translateX(130%);
+    .sister-site-actions .header-cta::after {
+      content: "";
+      position: absolute;
+      top: -35%;
+      bottom: -35%;
+      left: -34%;
+      width: 26%;
+      z-index: 1;
+      transform: skewX(-20deg);
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 239, 207, .28),
+        rgba(216, 159, 87, .13),
+        transparent
+      );
+      transition: left .72s cubic-bezier(.2,.7,.2,1);
+      pointer-events: none;
     }
 
     .sister-site-actions .header-cta:hover,
     .sister-site-actions .header-cta:focus-visible {
-      color: #fff7e8;
-      border-color: #b38c51;
-      transform: translateY(-1px);
+      color: #fffaf0;
+      border-color: #d2a25f;
+      transform: translateY(-2px);
+      background:
+        linear-gradient(180deg, rgba(72, 48, 28, .94), rgba(13, 10, 9, .98)),
+        radial-gradient(circle at 50% 0%, rgba(233, 188, 117, .24), transparent 68%);
       box-shadow:
-        inset 0 1px 0 rgba(255, 239, 207, .12),
-        0 0 24px rgba(179, 140, 81, .16),
-        0 10px 28px rgba(0, 0, 0, .48);
+        inset 0 1px 0 rgba(255, 248, 226, .23),
+        inset 0 -1px 0 rgba(107, 48, 19, .6),
+        0 0 30px rgba(181, 119, 53, .22),
+        0 13px 34px rgba(0, 0, 0, .58),
+        0 0 0 1px rgba(110, 55, 27, .62);
       outline: none;
     }
 
-    @media (max-width: 1180px) {
+    .sister-site-actions .header-cta:hover::after,
+    .sister-site-actions .header-cta:focus-visible::after {
+      left: 122%;
+    }
+
+    .sister-site-actions .header-cta:hover span,
+    .sister-site-actions .header-cta:focus-visible span {
+      color: #f0c984;
+      transform: translate(2px, -1px);
+    }
+
+    @media (max-width: 1240px) {
       .sister-site-actions {
-        gap: 7px;
+        gap: 9px;
       }
 
       .sister-site-actions .header-cta {
-        min-height: 42px;
-        padding: 0 14px;
+        min-height: 46px;
+        padding: 0 17px;
         font-size: 10px;
+        letter-spacing: .1em;
       }
     }
 
