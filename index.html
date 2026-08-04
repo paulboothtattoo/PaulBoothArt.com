@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Michroma&family=Oxanium:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20260804-form-image-attachment-fix" />
+  <link rel="stylesheet" href="styles.css?v=20260804-video-playback-fix" />
   <link rel="stylesheet" href="image-protection.css?v=20260802" />
   <style id="paulboothart-larger-header">
     .site-header {
@@ -869,6 +869,150 @@
       text-transform: none !important;
     }
 
+
+
+    /* =========================================================
+       VIDEO ART — RELIABLE INDEX-PAGE PLAYBACK
+       ========================================================= */
+    #video-grid.video-grid {
+      display: grid !important;
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      gap: clamp(16px, 2vw, 28px) !important;
+    }
+
+    .video-play-card {
+      position: relative !important;
+      display: block !important;
+      width: 100% !important;
+      padding: 0 !important;
+      overflow: hidden !important;
+      border: 1px solid rgba(173, 123, 68, .52) !important;
+      border-radius: 16px !important;
+      background: #050505 !important;
+      color: inherit !important;
+      text-align: left !important;
+      cursor: pointer !important;
+      box-shadow: 0 18px 42px rgba(0, 0, 0, .42) !important;
+    }
+
+    .video-play-card-image {
+      position: relative !important;
+      aspect-ratio: 16 / 9 !important;
+      overflow: hidden !important;
+      background: #000 !important;
+    }
+
+    .video-play-card-image img {
+      display: block !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      object-position: center !important;
+      transition: transform .35s ease !important;
+    }
+
+    .video-play-card-shade {
+      position: absolute !important;
+      inset: 0 !important;
+      background:
+        linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, .82)),
+        radial-gradient(circle at center, transparent 0 25%, rgba(0, 0, 0, .20) 75%) !important;
+      pointer-events: none !important;
+    }
+
+    .video-play-icon {
+      position: absolute !important;
+      top: 50% !important;
+      left: 50% !important;
+      z-index: 3 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 68px !important;
+      height: 68px !important;
+      border: 1px solid rgba(228, 177, 106, .88) !important;
+      border-radius: 50% !important;
+      background: rgba(20, 8, 5, .88) !important;
+      color: #fff1dc !important;
+      font-family: Arial, Helvetica, sans-serif !important;
+      font-size: 26px !important;
+      line-height: 1 !important;
+      transform: translate(-50%, -50%) !important;
+      box-shadow: 0 0 30px rgba(166, 55, 22, .30) !important;
+      pointer-events: none !important;
+    }
+
+    .video-play-card-copy {
+      padding: 18px 20px 21px !important;
+    }
+
+    .video-play-card-copy span {
+      color: #c99758 !important;
+      font-family: "Oxanium", sans-serif !important;
+      font-size: 10px !important;
+      letter-spacing: .14em !important;
+      text-transform: uppercase !important;
+    }
+
+    .video-play-card-copy h3 {
+      margin: 8px 0 0 !important;
+      color: #fff2df !important;
+      font-family: "Cinzel", Georgia, serif !important;
+      font-size: 20px !important;
+      line-height: 1.2 !important;
+    }
+
+    .video-play-card:hover img,
+    .video-play-card:focus-visible img {
+      transform: scale(1.035) !important;
+    }
+
+    .video-play-card:hover,
+    .video-play-card:focus-visible {
+      border-color: rgba(229, 176, 103, .90) !important;
+      outline: none !important;
+      box-shadow:
+        0 0 28px rgba(149, 48, 20, .24),
+        0 22px 50px rgba(0, 0, 0, .54) !important;
+    }
+
+    .project-dialog.video-dialog-active .dialog-visual {
+      min-height: min(72vh, 760px) !important;
+      background: #000 !important;
+    }
+
+    .project-dialog.video-dialog-active .dialog-youtube {
+      display: block !important;
+      width: 100% !important;
+      height: min(72vh, 760px) !important;
+      border: 0 !important;
+      background: #000 !important;
+    }
+
+    .project-dialog.video-dialog-active .dialog-image,
+    .project-dialog.video-dialog-active .dialog-video,
+    .project-dialog.video-dialog-active .dialog-youtube-fallback {
+      display: none !important;
+    }
+
+    @media (max-width: 980px) {
+      #video-grid.video-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+    }
+
+    @media (max-width: 620px) {
+      #video-grid.video-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .video-play-icon {
+        width: 58px !important;
+        height: 58px !important;
+        font-size: 22px !important;
+      }
+    }
+
   </style>
 
 </head>
@@ -979,7 +1123,7 @@
       <div class="dialog-actions"><button class="secondary-button dialog-zoom" type="button">View actual size</button><a class="secondary-button dialog-email" href="mailto:lastritestattoo@gmail.com">Inquire <span>&rarr;</span></a></div>
     </div>
   </dialog>
-  <script src="content.js?v=20260804-local-watermarked-images"></script><script src="script.js?v=20260804-contact-form-guaranteed"></script><script src="image-protection.js?v=20260802"></script>
+  <script src="content.js?v=20260804-video-playback-fix"></script><script src="script.js?v=20260804-contact-form-guaranteed"></script><script src="image-protection.js?v=20260802"></script>
 
 
   <script>
@@ -1168,6 +1312,126 @@
 
       window.addEventListener("load", installTattooContactForm, { once: true });
       setTimeout(installTattooContactForm, 500);
+    })();
+  </script>
+
+
+  <script>
+    (() => {
+      const installVideoArtPlayback = () => {
+        const data = window.PB_ART_CONTENT;
+        const grid = document.getElementById("video-grid");
+        const dialog = document.getElementById("project-dialog");
+
+        if (!data || !grid || !dialog) return false;
+
+        const videos = Array.isArray(data.works)
+          ? data.works.filter(item => item && item.mediaType === "youtube" && item.youtubeId)
+          : [];
+
+        if (!videos.length) return false;
+
+        const escapeHtml = value =>
+          String(value || "").replace(/[&<>"']/g, character => ({
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#039;"
+          })[character]);
+
+        grid.innerHTML = videos.map((video, index) => `
+          <button
+            class="video-play-card reveal visible"
+            type="button"
+            data-video-index="${index}"
+            aria-label="Play ${escapeHtml(video.title)}"
+          >
+            <div class="video-play-card-image">
+              <img
+                src="${escapeHtml(video.poster || video.image || `https://i.ytimg.com/vi/${video.youtubeId}/hqdefault.jpg`)}"
+                alt="${escapeHtml(video.alt || video.title)}"
+                loading="lazy"
+              >
+              <div class="video-play-card-shade" aria-hidden="true"></div>
+              <span class="video-play-icon" aria-hidden="true">&#9654;</span>
+            </div>
+            <div class="video-play-card-copy">
+              <span>${escapeHtml(video.medium || "Video Art")}</span>
+              <h3>${escapeHtml(video.title)}</h3>
+            </div>
+          </button>
+        `).join("");
+
+        const iframe = dialog.querySelector(".dialog-youtube");
+        const title = dialog.querySelector(".dialog-title");
+        const type = dialog.querySelector(".dialog-type");
+        const description = dialog.querySelector(".dialog-description");
+        const closeButton = dialog.querySelector(".dialog-close");
+
+        if (!iframe || !title || !type || !description || !closeButton) return false;
+
+        const stopPlayback = () => {
+          iframe.src = "about:blank";
+          dialog.classList.remove("video-dialog-active");
+        };
+
+        const openVideo = video => {
+          const origin = location.protocol === "http:" || location.protocol === "https:"
+            ? `&origin=${encodeURIComponent(location.origin)}`
+            : "";
+
+          title.textContent = video.title || "Video Art";
+          type.textContent = video.medium || "Video Art · YouTube";
+          description.textContent = video.description || "";
+          dialog.classList.add("video-dialog-active");
+
+          iframe.setAttribute(
+            "allow",
+            "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          );
+          iframe.src =
+            `https://www.youtube-nocookie.com/embed/${encodeURIComponent(video.youtubeId)}` +
+            `?autoplay=1&rel=0&modestbranding=1&playsinline=1${origin}`;
+
+          if (!dialog.open) dialog.showModal();
+        };
+
+        grid.addEventListener("click", event => {
+          const card = event.target.closest("[data-video-index]");
+          if (!card) return;
+
+          event.preventDefault();
+          event.stopPropagation();
+
+          const video = videos[Number(card.dataset.videoIndex)];
+          if (video) openVideo(video);
+        });
+
+        closeButton.addEventListener("click", stopPlayback);
+        dialog.addEventListener("close", stopPlayback);
+        dialog.addEventListener("cancel", stopPlayback);
+
+        return true;
+      };
+
+      const boot = () => {
+        if (installVideoArtPlayback()) return;
+
+        let attempts = 0;
+        const retry = window.setInterval(() => {
+          attempts += 1;
+          if (installVideoArtPlayback() || attempts >= 20) {
+            window.clearInterval(retry);
+          }
+        }, 150);
+      };
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", boot, { once: true });
+      } else {
+        boot();
+      }
     })();
   </script>
 
