@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Michroma&family=Oxanium:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20260804-header-buttons-close-x-fixed" />
+  <link rel="stylesheet" href="styles.css?v=20260804-sister-links-rectangular" />
   <link rel="stylesheet" href="image-protection.css?v=20260802" />
   <style id="paulboothart-larger-header">
     .site-header {
@@ -336,6 +336,74 @@
       .sister-site-actions .header-cta-label {
         font-size: 9px !important;
         letter-spacing: .06em !important;
+      }
+    }
+
+
+
+    /* =========================================================
+       SISTER-SITE LINKS — RECTANGULAR BUTTON FIX
+       Prevents the header links from collapsing into round circles.
+       ========================================================= */
+    .site-header .sister-site-actions {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-end !important;
+      gap: 12px !important;
+      width: auto !important;
+      min-width: 360px !important;
+      overflow: visible !important;
+    }
+
+    .site-header .sister-site-actions .header-cta {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex: 0 0 auto !important;
+      width: auto !important;
+      min-width: 168px !important;
+      max-width: none !important;
+      min-height: 46px !important;
+      height: 46px !important;
+      padding: 0 20px !important;
+      border-radius: 14px !important;
+      overflow: visible !important;
+      white-space: nowrap !important;
+    }
+
+    .site-header .sister-site-actions .header-cta-content {
+      position: static !important;
+      inset: auto !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: auto !important;
+      height: auto !important;
+      min-width: 0 !important;
+      padding: 0 !important;
+      gap: 8px !important;
+      white-space: nowrap !important;
+    }
+
+    .site-header .sister-site-actions .header-cta-label {
+      display: inline-block !important;
+      width: auto !important;
+      max-width: none !important;
+      overflow: visible !important;
+      white-space: nowrap !important;
+      text-overflow: clip !important;
+    }
+
+    @media (max-width: 1240px) and (min-width: 981px) {
+      .site-header .sister-site-actions {
+        min-width: 310px !important;
+        gap: 8px !important;
+      }
+
+      .site-header .sister-site-actions .header-cta {
+        min-width: 148px !important;
+        padding: 0 14px !important;
+        border-radius: 12px !important;
       }
     }
 
