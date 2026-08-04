@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Michroma&family=Oxanium:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20260804-booking-featured" />
+  <link rel="stylesheet" href="styles.css?v=20260804-guaranteed-booking-card" />
   <link rel="stylesheet" href="image-protection.css?v=20260802" />
   <style id="paulboothart-larger-header">
     .site-header {
@@ -469,128 +469,108 @@
 
 
     /* =========================================================
-       BOOK A TATTOO — FEATURED REALM + PRONOUNCED APPOINTMENT AREA
+       GUARANTEED BOOK-A-TATTOO REALM CARD + FEATURED BOOKING AREA
        ========================================================= */
-    #realm-grid .realm-card[href="#appointment"] {
+    #realm-grid .booking-realm-card {
       position: relative !important;
-      border-color: rgba(197, 139, 76, .96) !important;
+      border-color: rgba(213, 155, 86, .92) !important;
       box-shadow:
-        inset 0 1px 0 rgba(255, 236, 198, .16),
-        0 0 0 1px rgba(139, 52, 24, .30),
-        0 0 34px rgba(154, 46, 20, .24),
+        inset 0 1px 0 rgba(255, 239, 207, .15),
+        0 0 36px rgba(145, 43, 18, .28),
         0 22px 48px rgba(0, 0, 0, .58) !important;
     }
 
-    #realm-grid .realm-card[href="#appointment"]::after {
-      content: "BOOKING" !important;
+    #realm-grid .booking-realm-card::after {
+      content: "BOOK NOW" !important;
       position: absolute !important;
       top: 14px !important;
       right: 14px !important;
       z-index: 8 !important;
-      padding: 7px 10px !important;
-      border: 1px solid rgba(225, 177, 105, .82) !important;
+      padding: 7px 11px !important;
+      border: 1px solid rgba(231, 182, 112, .86) !important;
       border-radius: 999px !important;
-      color: #fff0d7 !important;
-      background: rgba(75, 20, 10, .88) !important;
+      color: #fff2dc !important;
+      background: rgba(82, 23, 11, .90) !important;
       font-family: "Oxanium", sans-serif !important;
       font-size: 9px !important;
       font-weight: 600 !important;
-      letter-spacing: .16em !important;
+      letter-spacing: .15em !important;
       line-height: 1 !important;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, .46) !important;
     }
 
-    #realm-grid .realm-card[href="#appointment"]:hover,
-    #realm-grid .realm-card[href="#appointment"]:focus-visible {
+    #realm-grid .booking-realm-card:hover,
+    #realm-grid .booking-realm-card:focus-visible {
       transform: translateY(-5px) scale(1.015) !important;
-      border-color: #e2ad69 !important;
+      border-color: #efbb75 !important;
       box-shadow:
-        inset 0 1px 0 rgba(255, 240, 209, .20),
-        0 0 0 1px rgba(174, 62, 24, .38),
-        0 0 46px rgba(177, 56, 22, .34),
+        inset 0 1px 0 rgba(255, 244, 218, .20),
+        0 0 48px rgba(177, 57, 22, .38),
         0 28px 60px rgba(0, 0, 0, .68) !important;
     }
 
     .appointment-featured {
       position: relative !important;
-      margin-top: 42px !important;
-      margin-bottom: 42px !important;
-      padding-top: clamp(82px, 9vw, 132px) !important;
-      padding-bottom: clamp(82px, 9vw, 132px) !important;
-      border-top: 1px solid rgba(193, 132, 69, .72) !important;
-      border-bottom: 1px solid rgba(193, 132, 69, .72) !important;
+      margin-top: 48px !important;
+      margin-bottom: 48px !important;
+      padding-top: clamp(90px, 9vw, 138px) !important;
+      padding-bottom: clamp(90px, 9vw, 138px) !important;
+      border-top: 2px solid rgba(205, 143, 73, .78) !important;
+      border-bottom: 2px solid rgba(205, 143, 73, .78) !important;
       background:
-        radial-gradient(circle at 50% 0%, rgba(133, 36, 17, .26), transparent 44%),
-        linear-gradient(180deg, rgba(32, 10, 7, .90), rgba(7, 7, 7, .96)) !important;
+        radial-gradient(circle at 50% 0%, rgba(155, 43, 18, .31), transparent 46%),
+        linear-gradient(180deg, rgba(38, 12, 8, .95), rgba(7, 7, 7, .98)) !important;
       box-shadow:
-        inset 0 1px 0 rgba(255, 234, 198, .08),
-        inset 0 -1px 0 rgba(255, 234, 198, .05),
-        0 0 52px rgba(108, 28, 12, .20) !important;
+        inset 0 1px 0 rgba(255, 237, 204, .10),
+        0 0 64px rgba(121, 31, 13, .25) !important;
       overflow: hidden !important;
     }
 
     .appointment-featured::before {
-      content: "TATTOO APPOINTMENTS" !important;
+      content: "NOW BOOKING TATTOO PROJECTS" !important;
       position: absolute !important;
-      top: 24px !important;
+      top: 25px !important;
       left: 50% !important;
       transform: translateX(-50%) !important;
-      z-index: 2 !important;
-      padding: 9px 18px !important;
-      border: 1px solid rgba(211, 158, 88, .70) !important;
+      z-index: 3 !important;
+      padding: 10px 20px !important;
+      border: 1px solid rgba(224, 169, 96, .80) !important;
       border-radius: 999px !important;
-      color: #f1d4a8 !important;
-      background: rgba(23, 8, 6, .78) !important;
+      color: #f4d8ad !important;
+      background: rgba(38, 10, 7, .88) !important;
       font-family: "Oxanium", sans-serif !important;
       font-size: 10px !important;
       font-weight: 600 !important;
-      letter-spacing: .22em !important;
-      line-height: 1 !important;
+      letter-spacing: .20em !important;
       white-space: nowrap !important;
     }
 
     .appointment-featured .section-heading h2 {
       color: #fff3df !important;
+      font-size: clamp(42px, 6vw, 82px) !important;
       text-shadow:
-        0 0 20px rgba(187, 78, 35, .34),
-        0 4px 22px rgba(0, 0, 0, .66) !important;
+        0 0 24px rgba(191, 73, 30, .38),
+        0 5px 24px rgba(0, 0, 0, .72) !important;
     }
 
     .appointment-featured .protocol-card {
-      border-color: rgba(188, 132, 72, .64) !important;
-      background:
-        linear-gradient(180deg, rgba(43, 23, 15, .86), rgba(10, 10, 10, .94)) !important;
+      border-color: rgba(199, 140, 76, .68) !important;
+      background: linear-gradient(180deg, rgba(48, 25, 16, .90), rgba(10, 10, 10, .96)) !important;
       box-shadow:
-        inset 0 1px 0 rgba(255, 235, 202, .07),
-        0 16px 34px rgba(0, 0, 0, .42) !important;
-    }
-
-    .appointment-featured .protocol-card > span {
-      color: #e0aa65 !important;
+        inset 0 1px 0 rgba(255, 237, 205, .08),
+        0 18px 38px rgba(0, 0, 0, .48) !important;
     }
 
     .appointment-featured .appointment-cta {
-      min-height: 58px !important;
-      padding: 0 30px !important;
-      border-color: rgba(221, 163, 91, .88) !important;
-      background:
-        linear-gradient(180deg, rgba(116, 44, 20, .95), rgba(38, 13, 8, .98)) !important;
+      min-height: 62px !important;
+      padding: 0 34px !important;
+      border-color: rgba(231, 176, 105, .94) !important;
+      background: linear-gradient(180deg, rgba(128, 48, 21, .97), rgba(42, 14, 8, .99)) !important;
       box-shadow:
-        inset 0 1px 0 rgba(255, 240, 207, .14),
-        0 0 28px rgba(157, 48, 20, .24),
-        0 14px 34px rgba(0, 0, 0, .48) !important;
+        inset 0 1px 0 rgba(255, 241, 213, .16),
+        0 0 34px rgba(171, 53, 21, .30),
+        0 16px 38px rgba(0, 0, 0, .54) !important;
       font-size: 13px !important;
       letter-spacing: .13em !important;
-    }
-
-    .appointment-featured .appointment-cta:hover,
-    .appointment-featured .appointment-cta:focus-visible {
-      transform: translateY(-2px) scale(1.015) !important;
-      border-color: #efbd78 !important;
-      box-shadow:
-        inset 0 1px 0 rgba(255, 245, 218, .18),
-        0 0 38px rgba(183, 63, 24, .34),
-        0 18px 42px rgba(0, 0, 0, .56) !important;
     }
 
   </style>
@@ -701,5 +681,39 @@
       <div class="dialog-actions"><button class="secondary-button dialog-zoom" type="button">View actual size</button><a class="secondary-button dialog-email" href="mailto:lastritestattoo@gmail.com">Inquire <span>&rarr;</span></a></div>
     </div>
   </dialog>
-  <script src="content.js?v=20260804-booking-realm"></script><script src="script.js?v=20260729-logo-background-clean"></script><script src="image-protection.js?v=20260802"></script>
+  <script src="content.js?v=20260804-local-watermarked-images"></script><script src="script.js?v=20260804-guaranteed-booking-card"></script><script src="image-protection.js?v=20260802"></script>
+
+  <script>
+    (() => {
+      const addBookingRealmCard = () => {
+        const grid = document.getElementById("realm-grid");
+        if (!grid || grid.querySelector('.booking-realm-card')) return;
+
+        const card = document.createElement("a");
+        card.className = "realm-card realm-card-graphic reveal booking-realm-card visible";
+        card.href = "#appointment";
+        card.setAttribute("aria-label", "Book a tattoo with Paul Booth");
+        card.innerHTML = `
+          <img class="realm-card-image" src="content/images/IMG_9988.jpg" alt="Book a tattoo with Paul Booth" loading="lazy">
+          <div class="realm-card-shade" aria-hidden="true"></div>
+          <div class="realm-card-copy">
+            <span class="realm-number">06</span>
+            <h3>Book a Tattoo</h3>
+            <p>Appointments / Consultation / Project Inquiry</p>
+            <span class="card-arrow">&rarr;</span>
+          </div>
+        `;
+        grid.appendChild(card);
+      };
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", () => setTimeout(addBookingRealmCard, 0));
+      } else {
+        setTimeout(addBookingRealmCard, 0);
+      }
+
+      window.addEventListener("load", addBookingRealmCard);
+    })();
+  </script>
+
 </body></html>
