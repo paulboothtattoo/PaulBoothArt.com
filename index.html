@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Michroma&family=Oxanium:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20260804-guaranteed-booking-card" />
+  <link rel="stylesheet" href="styles.css?v=20260804-booking-card-no-circle" />
   <link rel="stylesheet" href="image-protection.css?v=20260802" />
   <style id="paulboothart-larger-header">
     .site-header {
@@ -468,11 +468,16 @@
 
 
 
+
     /* =========================================================
-       GUARANTEED BOOK-A-TATTOO REALM CARD + FEATURED BOOKING AREA
+       BOOKING REALM CARD — CLEAN RECTANGULAR VERSION
+       No pseudo-elements are used, so no circular overlay can appear.
        ========================================================= */
     #realm-grid .booking-realm-card {
       position: relative !important;
+      border-radius: 0 !important;
+      overflow: hidden !important;
+      isolation: isolate !important;
       border-color: rgba(213, 155, 86, .92) !important;
       box-shadow:
         inset 0 1px 0 rgba(255, 239, 207, .15),
@@ -480,12 +485,35 @@
         0 22px 48px rgba(0, 0, 0, .58) !important;
     }
 
+    #realm-grid .booking-realm-card::before,
     #realm-grid .booking-realm-card::after {
-      content: "BOOK NOW" !important;
+      content: none !important;
+      display: none !important;
+      width: 0 !important;
+      height: 0 !important;
+      border: 0 !important;
+      background: none !important;
+      box-shadow: none !important;
+      opacity: 0 !important;
+    }
+
+    #realm-grid .booking-realm-card img {
+      border-radius: 0 !important;
+      clip-path: none !important;
+      mask: none !important;
+      -webkit-mask: none !important;
+    }
+
+    #realm-grid .booking-realm-card .booking-badge {
       position: absolute !important;
       top: 14px !important;
       right: 14px !important;
-      z-index: 8 !important;
+      z-index: 20 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: auto !important;
+      height: auto !important;
       padding: 7px 11px !important;
       border: 1px solid rgba(231, 182, 112, .86) !important;
       border-radius: 999px !important;
@@ -496,6 +524,8 @@
       font-weight: 600 !important;
       letter-spacing: .15em !important;
       line-height: 1 !important;
+      white-space: nowrap !important;
+      pointer-events: none !important;
     }
 
     #realm-grid .booking-realm-card:hover,
@@ -506,71 +536,6 @@
         inset 0 1px 0 rgba(255, 244, 218, .20),
         0 0 48px rgba(177, 57, 22, .38),
         0 28px 60px rgba(0, 0, 0, .68) !important;
-    }
-
-    .appointment-featured {
-      position: relative !important;
-      margin-top: 48px !important;
-      margin-bottom: 48px !important;
-      padding-top: clamp(90px, 9vw, 138px) !important;
-      padding-bottom: clamp(90px, 9vw, 138px) !important;
-      border-top: 2px solid rgba(205, 143, 73, .78) !important;
-      border-bottom: 2px solid rgba(205, 143, 73, .78) !important;
-      background:
-        radial-gradient(circle at 50% 0%, rgba(155, 43, 18, .31), transparent 46%),
-        linear-gradient(180deg, rgba(38, 12, 8, .95), rgba(7, 7, 7, .98)) !important;
-      box-shadow:
-        inset 0 1px 0 rgba(255, 237, 204, .10),
-        0 0 64px rgba(121, 31, 13, .25) !important;
-      overflow: hidden !important;
-    }
-
-    .appointment-featured::before {
-      content: "NOW BOOKING TATTOO PROJECTS" !important;
-      position: absolute !important;
-      top: 25px !important;
-      left: 50% !important;
-      transform: translateX(-50%) !important;
-      z-index: 3 !important;
-      padding: 10px 20px !important;
-      border: 1px solid rgba(224, 169, 96, .80) !important;
-      border-radius: 999px !important;
-      color: #f4d8ad !important;
-      background: rgba(38, 10, 7, .88) !important;
-      font-family: "Oxanium", sans-serif !important;
-      font-size: 10px !important;
-      font-weight: 600 !important;
-      letter-spacing: .20em !important;
-      white-space: nowrap !important;
-    }
-
-    .appointment-featured .section-heading h2 {
-      color: #fff3df !important;
-      font-size: clamp(42px, 6vw, 82px) !important;
-      text-shadow:
-        0 0 24px rgba(191, 73, 30, .38),
-        0 5px 24px rgba(0, 0, 0, .72) !important;
-    }
-
-    .appointment-featured .protocol-card {
-      border-color: rgba(199, 140, 76, .68) !important;
-      background: linear-gradient(180deg, rgba(48, 25, 16, .90), rgba(10, 10, 10, .96)) !important;
-      box-shadow:
-        inset 0 1px 0 rgba(255, 237, 205, .08),
-        0 18px 38px rgba(0, 0, 0, .48) !important;
-    }
-
-    .appointment-featured .appointment-cta {
-      min-height: 62px !important;
-      padding: 0 34px !important;
-      border-color: rgba(231, 176, 105, .94) !important;
-      background: linear-gradient(180deg, rgba(128, 48, 21, .97), rgba(42, 14, 8, .99)) !important;
-      box-shadow:
-        inset 0 1px 0 rgba(255, 241, 213, .16),
-        0 0 34px rgba(171, 53, 21, .30),
-        0 16px 38px rgba(0, 0, 0, .54) !important;
-      font-size: 13px !important;
-      letter-spacing: .13em !important;
     }
 
   </style>
@@ -687,32 +652,62 @@
     (() => {
       const addBookingRealmCard = () => {
         const grid = document.getElementById("realm-grid");
-        if (!grid || grid.querySelector('.booking-realm-card')) return;
+        if (!grid || grid.querySelector(".booking-realm-card")) return;
 
-        const card = document.createElement("a");
-        card.className = "realm-card realm-card-graphic reveal booking-realm-card visible";
+        const existingCards = Array.from(grid.children);
+        const tattooCard =
+          existingCards.find(card => {
+            const title = card.querySelector("h3");
+            return title && title.textContent.trim().toLowerCase() === "tattoo art";
+          }) || existingCards[1] || existingCards[0];
+
+        if (!tattooCard) return;
+
+        const card = tattooCard.cloneNode(true);
+        card.classList.add("booking-realm-card");
+        const badge = document.createElement("span");
+        badge.className = "booking-badge";
+        badge.textContent = "BOOK NOW";
+        card.appendChild(badge);
         card.href = "#appointment";
         card.setAttribute("aria-label", "Book a tattoo with Paul Booth");
-        card.innerHTML = `
-          <img class="realm-card-image" src="content/images/IMG_9988.jpg" alt="Book a tattoo with Paul Booth" loading="lazy">
-          <div class="realm-card-shade" aria-hidden="true"></div>
-          <div class="realm-card-copy">
-            <span class="realm-number">06</span>
-            <h3>Book a Tattoo</h3>
-            <p>Appointments / Consultation / Project Inquiry</p>
-            <span class="card-arrow">&rarr;</span>
-          </div>
-        `;
+
+        const title = card.querySelector("h3");
+        if (title) title.textContent = "Book a Tattoo";
+
+        const description = card.querySelector("p");
+        if (description) {
+          description.textContent = "Appointments / Consultation / Project Inquiry";
+        }
+
+        const number =
+          card.querySelector(".realm-number") ||
+          card.querySelector("[class*='number']") ||
+          card.querySelector("span");
+
+        if (number && /realm/i.test(number.textContent)) {
+          number.textContent = "06 / REALM";
+        }
+
+        const image = card.querySelector("img");
+        if (image) {
+          image.src = "content/images/IMG_9975.jpg";
+          image.alt = "Book a tattoo with Paul Booth";
+        }
+
         grid.appendChild(card);
       };
 
+      const run = () => requestAnimationFrame(() => requestAnimationFrame(addBookingRealmCard));
+
       if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", () => setTimeout(addBookingRealmCard, 0));
+        document.addEventListener("DOMContentLoaded", run, { once: true });
       } else {
-        setTimeout(addBookingRealmCard, 0);
+        run();
       }
 
-      window.addEventListener("load", addBookingRealmCard);
+      window.addEventListener("load", run, { once: true });
+      setTimeout(addBookingRealmCard, 500);
     })();
   </script>
 
