@@ -100,38 +100,30 @@
 
   const dprev=qs('.dialog-prev'),dnext=qs('.dialog-next');
 
-  function navigationList(){
+  function currentCollection(){
     if(!current)return [];
-
-    // Keep navigation inside the same collection so Fine Art does not jump
-    // into tattoos, videos, jewelry, or objects unexpectedly.
-    if(current.category){
-      return DATA.works.filter(w=>w.category===current.category);
-    }
-
-    return DATA.works.filter(w=>!isMotion(w));
+    return DATA.works.filter(w=>w.category===current.category);
   }
 
-  function navigateDialog(direction){
-    const list=navigationList();
+  function navigateCurrentCollection(direction){
+    const list=currentCollection();
     if(!list.length||!current)return;
 
-    const currentIndex=list.findIndex(w=>w.id===current.id);
-    const safeIndex=currentIndex<0?0:currentIndex;
-    const nextIndex=(safeIndex+direction+list.length)%list.length;
+    const index=list.findIndex(w=>w.id===current.id);
+    const nextIndex=((index<0?0:index)+direction+list.length)%list.length;
     openWork(list[nextIndex].id);
   }
 
   dprev?.addEventListener('click',e=>{
     e.preventDefault();
     e.stopPropagation();
-    navigateDialog(-1);
+    navigateCurrentCollection(-1);
   });
 
   dnext?.addEventListener('click',e=>{
     e.preventDefault();
     e.stopPropagation();
-    navigateDialog(1);
+    navigateCurrentCollection(1);
   });
 
   document.addEventListener('click',e=>{
@@ -149,12 +141,14 @@
     if(!dialog.open)return;
     if(e.key==='ArrowLeft'){
       e.preventDefault();
-      navigateDialog(-1);
+      navigateCurrentCollection(-1);
     }else if(e.key==='ArrowRight'){
       e.preventDefault();
-      navigateDialog(1);
+      navigateCurrentCollection(1);
     }
   });
+
+  console.info('PB build: navigation-verified-fix-20260804');
 
   const menu=qs('.menu-button'),panel=qs('.mobile-panel');
   menu.addEventListener('click',()=>{const o=panel.classList.toggle('open');menu.setAttribute('aria-expanded',String(o));panel.setAttribute('aria-hidden',String(!o))});
