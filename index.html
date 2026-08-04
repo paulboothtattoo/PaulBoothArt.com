@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Michroma&family=Oxanium:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20260804-definitive-single-x" />
+  <link rel="stylesheet" href="styles.css?v=20260804-booking-featured" />
   <link rel="stylesheet" href="image-protection.css?v=20260802" />
   <style id="paulboothart-larger-header">
     .site-header {
@@ -466,6 +466,133 @@
       pointer-events: none !important;
     }
 
+
+
+    /* =========================================================
+       BOOK A TATTOO — FEATURED REALM + PRONOUNCED APPOINTMENT AREA
+       ========================================================= */
+    #realm-grid .realm-card[href="#appointment"] {
+      position: relative !important;
+      border-color: rgba(197, 139, 76, .96) !important;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 236, 198, .16),
+        0 0 0 1px rgba(139, 52, 24, .30),
+        0 0 34px rgba(154, 46, 20, .24),
+        0 22px 48px rgba(0, 0, 0, .58) !important;
+    }
+
+    #realm-grid .realm-card[href="#appointment"]::after {
+      content: "BOOKING" !important;
+      position: absolute !important;
+      top: 14px !important;
+      right: 14px !important;
+      z-index: 8 !important;
+      padding: 7px 10px !important;
+      border: 1px solid rgba(225, 177, 105, .82) !important;
+      border-radius: 999px !important;
+      color: #fff0d7 !important;
+      background: rgba(75, 20, 10, .88) !important;
+      font-family: "Oxanium", sans-serif !important;
+      font-size: 9px !important;
+      font-weight: 600 !important;
+      letter-spacing: .16em !important;
+      line-height: 1 !important;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .46) !important;
+    }
+
+    #realm-grid .realm-card[href="#appointment"]:hover,
+    #realm-grid .realm-card[href="#appointment"]:focus-visible {
+      transform: translateY(-5px) scale(1.015) !important;
+      border-color: #e2ad69 !important;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 240, 209, .20),
+        0 0 0 1px rgba(174, 62, 24, .38),
+        0 0 46px rgba(177, 56, 22, .34),
+        0 28px 60px rgba(0, 0, 0, .68) !important;
+    }
+
+    .appointment-featured {
+      position: relative !important;
+      margin-top: 42px !important;
+      margin-bottom: 42px !important;
+      padding-top: clamp(82px, 9vw, 132px) !important;
+      padding-bottom: clamp(82px, 9vw, 132px) !important;
+      border-top: 1px solid rgba(193, 132, 69, .72) !important;
+      border-bottom: 1px solid rgba(193, 132, 69, .72) !important;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(133, 36, 17, .26), transparent 44%),
+        linear-gradient(180deg, rgba(32, 10, 7, .90), rgba(7, 7, 7, .96)) !important;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 234, 198, .08),
+        inset 0 -1px 0 rgba(255, 234, 198, .05),
+        0 0 52px rgba(108, 28, 12, .20) !important;
+      overflow: hidden !important;
+    }
+
+    .appointment-featured::before {
+      content: "TATTOO APPOINTMENTS" !important;
+      position: absolute !important;
+      top: 24px !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      z-index: 2 !important;
+      padding: 9px 18px !important;
+      border: 1px solid rgba(211, 158, 88, .70) !important;
+      border-radius: 999px !important;
+      color: #f1d4a8 !important;
+      background: rgba(23, 8, 6, .78) !important;
+      font-family: "Oxanium", sans-serif !important;
+      font-size: 10px !important;
+      font-weight: 600 !important;
+      letter-spacing: .22em !important;
+      line-height: 1 !important;
+      white-space: nowrap !important;
+    }
+
+    .appointment-featured .section-heading h2 {
+      color: #fff3df !important;
+      text-shadow:
+        0 0 20px rgba(187, 78, 35, .34),
+        0 4px 22px rgba(0, 0, 0, .66) !important;
+    }
+
+    .appointment-featured .protocol-card {
+      border-color: rgba(188, 132, 72, .64) !important;
+      background:
+        linear-gradient(180deg, rgba(43, 23, 15, .86), rgba(10, 10, 10, .94)) !important;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 235, 202, .07),
+        0 16px 34px rgba(0, 0, 0, .42) !important;
+    }
+
+    .appointment-featured .protocol-card > span {
+      color: #e0aa65 !important;
+    }
+
+    .appointment-featured .appointment-cta {
+      min-height: 58px !important;
+      padding: 0 30px !important;
+      border-color: rgba(221, 163, 91, .88) !important;
+      background:
+        linear-gradient(180deg, rgba(116, 44, 20, .95), rgba(38, 13, 8, .98)) !important;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 240, 207, .14),
+        0 0 28px rgba(157, 48, 20, .24),
+        0 14px 34px rgba(0, 0, 0, .48) !important;
+      font-size: 13px !important;
+      letter-spacing: .13em !important;
+    }
+
+    .appointment-featured .appointment-cta:hover,
+    .appointment-featured .appointment-cta:focus-visible {
+      transform: translateY(-2px) scale(1.015) !important;
+      border-color: #efbd78 !important;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 245, 218, .18),
+        0 0 38px rgba(183, 63, 24, .34),
+        0 18px 42px rgba(0, 0, 0, .56) !important;
+    }
+
   </style>
 
 </head>
@@ -546,7 +673,7 @@
 
     <section id="about" class="about section-shell reveal"><div class="about-photo-frame"><img src="content/images/PB_headshot01.jpg" alt="Paul Booth portrait" /><span class="photo-index">PB / 001</span></div><div class="about-copy"><span class="eyebrow">About Paul Booth</span><h2>Artist. Tattooist. Sculptor. Filmmaker.</h2><p class="lead">Nearly four decades at the crossroads of dark surrealism, gothic artistry, and countercultural defiance.</p><p>Paul Booth has forged a singular visual language that explores the macabre, the psychological, and the taboo. His work across canvas, skin, sculpture, film, music, and immersive environments confronts the shadowed recesses of the human condition.</p><details><summary>Read the full biography</summary><p>Booth's early work emerged from a deeply personal need to give form to internal chaos. In the 1990s his visceral aesthetic reached the cultural mainstream through tattoo work for major figures in heavy music and performance. His Last Rites Tattoo Theatre & Gallery became a three-story Gothic landmark in Manhattan and a physical portal into his imagination. His work has since been exhibited internationally and featured across major publications, while the Last Rites world expanded into fashion, jewelry, home d&eacute;cor, film, and music.</p></details></div><div class="about-reliquary" aria-hidden="true"><div class="reliquary-figure"></div></div></section>
 
-    <section id="appointment" class="appointment section-shell"><div class="section-heading reveal split-heading"><div><span class="eyebrow">Tattoo Appointment Protocol</span><h2>Book a Tattoo</h2></div><p>Paul currently works in New Jersey, approximately 35 minutes west of midtown Manhattan.</p></div><div class="appointment-grid"><article class="protocol-card reveal"><span>01</span><h3>Send the Concept</h3><p>Email your idea or theme, a photo of the area to be tattooed, and any budgetary information.</p></article><article class="protocol-card reveal"><span>02</span><h3>Freehand Interpretation</h3><p>Paul works mainly freehand and develops your ideas through his own visual interpretation.</p></article><article class="protocol-card reveal"><span>03</span><h3>Reserve the Session</h3><p>A $500 deposit holds the appointment and is applied toward the tattoo. Cancellations or rescheduling require 48 hours' notice.</p></article><article class="protocol-card reveal"><span>04</span><h3>Travel & Timing</h3><p>Newark Liberty International Airport (EWR) is the closest airport. Large-scale work can move quickly; a back piece may be completed in 8&ndash;10 hours.</p></article></div><a class="primary-button appointment-cta" href="mailto:lastritestattoo@gmail.com?subject=Tattoo%20Appointment%20Inquiry">Start an appointment inquiry <span>&rarr;</span></a></section>
+    <section id="appointment" class="appointment appointment-featured section-shell"><div class="section-heading reveal split-heading"><div><span class="eyebrow">Tattoo Appointment Protocol</span><h2>Book a Tattoo</h2></div><p>Paul currently works in New Jersey, approximately 35 minutes west of midtown Manhattan.</p></div><div class="appointment-grid"><article class="protocol-card reveal"><span>01</span><h3>Send the Concept</h3><p>Email your idea or theme, a photo of the area to be tattooed, and any budgetary information.</p></article><article class="protocol-card reveal"><span>02</span><h3>Freehand Interpretation</h3><p>Paul works mainly freehand and develops your ideas through his own visual interpretation.</p></article><article class="protocol-card reveal"><span>03</span><h3>Reserve the Session</h3><p>A $500 deposit holds the appointment and is applied toward the tattoo. Cancellations or rescheduling require 48 hours' notice.</p></article><article class="protocol-card reveal"><span>04</span><h3>Travel & Timing</h3><p>Newark Liberty International Airport (EWR) is the closest airport. Large-scale work can move quickly; a back piece may be completed in 8&ndash;10 hours.</p></article></div><a class="primary-button appointment-cta" href="mailto:lastritestattoo@gmail.com?subject=Tattoo%20Appointment%20Inquiry">Start an appointment inquiry <span>&rarr;</span></a></section>
 
     <section id="contact" class="signal section-shell reveal"><div><span class="eyebrow">Contact Channel</span><h2>Enter the Conversation</h2><p>Original artwork, exhibitions, tattoo projects, licensing, press, and collaborations.</p></div><div class="signal-actions"><a href="mailto:lastritestattoo@gmail.com" class="secondary-button">Email Last Rites <span>&rarr;</span></a><a href="https://www.instagram.com/paulbooth.ai/" target="_blank" rel="noopener noreferrer" class="secondary-button">Instagram <span>&#8599;</span></a><a href="https://www.youtube.com/@paulboothart" target="_blank" rel="noopener noreferrer" class="secondary-button">YouTube <span>&#8599;</span></a></div></section>
   </main>
@@ -574,5 +701,5 @@
       <div class="dialog-actions"><button class="secondary-button dialog-zoom" type="button">View actual size</button><a class="secondary-button dialog-email" href="mailto:lastritestattoo@gmail.com">Inquire <span>&rarr;</span></a></div>
     </div>
   </dialog>
-  <script src="content.js?v=20260804-local-watermarked-images"></script><script src="script.js?v=20260729-logo-background-clean"></script><script src="image-protection.js?v=20260802"></script>
+  <script src="content.js?v=20260804-booking-realm"></script><script src="script.js?v=20260729-logo-background-clean"></script><script src="image-protection.js?v=20260802"></script>
 </body></html>

@@ -12,6 +12,13 @@ window.PB_ART_CONTENT = {
       "href": "#tattoo-art",
       "image": "content/images/IMG_9975.jpg"
     },
+
+    {
+      "title": "Book a Tattoo",
+      "label": "Appointments / Consultation / Project Inquiry",
+      "href": "#appointment",
+      "image": "content/images/IMG_9975.jpg"
+    },
     {
       "title": "Video Art",
       "label": "Film / Motion / Moving Image",
