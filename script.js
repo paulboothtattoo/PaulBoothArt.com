@@ -94,7 +94,7 @@
     else{dimg.src=w.image;dimg.alt=w.alt||w.title}
     dtype.textContent=labels[w.category]||w.medium;dtitle.textContent=w.title;ddesc.textContent=w.description||w.medium;
     dmail.href=`mailto:lastritestattoo@gmail.com?subject=${encodeURIComponent('Inquiry: '+w.title)}`;
-    dialog.showModal();
+    if(!dialog.open)dialog.showModal();
   }
   function closeDialog(){dvideo.pause();dyoutube.removeAttribute('src');dyoutubeFallback.hidden=true;dialog.close();resetZoom()}
 
@@ -148,7 +148,7 @@
     }
   });
 
-  console.info('PB build: navigation-verified-fix-20260804');
+  console.info('PB build: video-advance-fix-20260804');
 
   const menu=qs('.menu-button'),panel=qs('.mobile-panel');
   menu.addEventListener('click',()=>{const o=panel.classList.toggle('open');menu.setAttribute('aria-expanded',String(o));panel.setAttribute('aria-hidden',String(!o))});
