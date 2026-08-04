@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Michroma&family=Oxanium:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20260804-contact-form-guaranteed" />
+  <link rel="stylesheet" href="styles.css?v=20260804-form-image-attachment-fix" />
   <link rel="stylesheet" href="image-protection.css?v=20260802" />
   <style id="paulboothart-larger-header">
     .site-header {
@@ -857,6 +857,18 @@
       }
     }
 
+
+
+    .tattoo-contact-form .attachment-note {
+      color: rgba(227, 211, 189, .56) !important;
+      font-family: "Oxanium", sans-serif !important;
+      font-size: 10px !important;
+      font-weight: 400 !important;
+      letter-spacing: .04em !important;
+      line-height: 1.5 !important;
+      text-transform: none !important;
+    }
+
   </style>
 
 </head>
@@ -1124,8 +1136,9 @@
             </label>
 
             <label class="wide">
-              Reference image
-              <input type="file" name="Reference image" accept="image/*,.pdf">
+              Reference image *
+              <input type="file" name="attachment" accept="image/png,image/jpeg,image/jpg,image/webp,.pdf" required>
+              <small class="attachment-note">Maximum total upload size: 10 MB. JPG, PNG, WEBP, or PDF.</small>
             </label>
 
             <label class="consent">
