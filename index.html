@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Michroma&family=Oxanium:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20260804-image-navigation-fix" />
+  <link rel="stylesheet" href="styles.css?v=20260804-image-advance-current-file" />
   <link rel="stylesheet" href="image-protection.css?v=20260802" />
   <style id="paulboothart-larger-header">
     .site-header {
@@ -980,8 +980,96 @@
       <div class="dialog-actions"><button class="secondary-button dialog-zoom" type="button">View actual size</button><a class="secondary-button dialog-email" href="mailto:lastritestattoo@gmail.com">Inquire <span>&rarr;</span></a></div>
     </div>
   </dialog>
-  <script src="content.js?v=20260804-image-navigation-fix"></script><script src="script.js?v=20260804-image-navigation-fix"></script><script src="image-protection.js?v=20260802"></script>
-<script>
+  <script src="content.js?v=20260804-video-direct-fix"></script><script src="script.js?v=20260804-video-direct-fix"></script><script src="image-protection.js?v=20260802"></script>
+
+
+  <script>
+    (() => {
+      const dialog = document.getElementById("project-dialog");
+      if (!dialog) return;
+
+      const previousButton = dialog.querySelector(".dialog-prev");
+      const nextButton = dialog.querySelector(".dialog-next");
+      let currentOpener = null;
+
+      const getOpeners = () => {
+        const selectors = [
+          "#project-grid [data-id]",
+          "#object-grid [data-id]",
+          ".tattoo-feature[data-open-id]",
+          ".motion-screen[data-open-id]",
+          "#video-grid [data-youtube-open]",
+          "#video-grid .video-expand"
+        ].join(",");
+
+        return Array.from(document.querySelectorAll(selectors)).filter(element => {
+          const style = window.getComputedStyle(element);
+          return !element.hidden &&
+            style.display !== "none" &&
+            style.visibility !== "hidden";
+        });
+      };
+
+      document.addEventListener("click", event => {
+        const opener = event.target.closest(
+          "[data-id], [data-open-id], [data-youtube-open], .video-expand"
+        );
+        if (opener && !opener.closest("#project-dialog")) {
+          currentOpener = opener;
+        }
+      }, true);
+
+      const navigate = direction => {
+        const openers = getOpeners();
+        if (!openers.length) return;
+
+        let index = currentOpener ? openers.indexOf(currentOpener) : -1;
+        if (index < 0) index = 0;
+
+        const nextIndex = (index + direction + openers.length) % openers.length;
+        const target = openers[nextIndex];
+        currentOpener = target;
+
+        if (dialog.open) {
+          dialog.close();
+        }
+
+        window.setTimeout(() => {
+          target.scrollIntoView({ block: "nearest", inline: "nearest" });
+          target.click();
+        }, 90);
+      };
+
+      previousButton?.addEventListener("click", event => {
+        event.preventDefault();
+        event.stopPropagation();
+        navigate(-1);
+      });
+
+      nextButton?.addEventListener("click", event => {
+        event.preventDefault();
+        event.stopPropagation();
+        navigate(1);
+      });
+
+      document.addEventListener("keydown", event => {
+        if (!dialog.open) return;
+
+        if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          navigate(-1);
+        }
+
+        if (event.key === "ArrowRight") {
+          event.preventDefault();
+          navigate(1);
+        }
+      });
+    })();
+  </script>
+
+
+  <script>
     (() => {
       const installTattooContactForm = () => {
         const appointment = document.getElementById("appointment");
