@@ -12,7 +12,7 @@
     const params=new URLSearchParams({rel:'0',playsinline:'1'});
     if(autoplay)params.set('autoplay','1');
     if(/^https?:$/.test(location.protocol))params.set('origin',location.origin);
-    return `https://www.youtube.com/embed/${encodeURIComponent(w.youtubeId)}?${params.toString()}`;
+    return `https://www.youtube-nocookie.com/embed/${encodeURIComponent(w.youtubeId)}?${params.toString()}`;
   };
 
   const realmGrid=qs('#realm-grid');
@@ -82,13 +82,13 @@
     const isVideo=isLocalVideo||isYouTube;
     dimg.hidden=isVideo;dvideo.hidden=!isLocalVideo;dyoutube.hidden=true;dyoutubeFallback.hidden=true;dzoom.hidden=isVideo;
     dvideo.pause();dvideo.removeAttribute('src');dvideo.load();dyoutube.removeAttribute('src');
-    if(isLocalVideo){dimg.removeAttribute('src');dvideo.poster=w.poster||'';dvideo.src=w.src;doriginal.href=w.src;doriginal.innerHTML='Open video file <span>↗</span>'}
+    if(isLocalVideo){dimg.removeAttribute('src');dvideo.poster=w.poster||'';dvideo.src=w.src}
     else if(isYouTube){
-      dimg.removeAttribute('src');doriginal.href=w.src;doriginal.innerHTML='Watch on YouTube <span>↗</span>';
+      dimg.removeAttribute('src');
       if(isLocalFile){
         dyoutubeFallback.hidden=false;dyoutubeFallbackPoster.src=youtubePoster(w.youtubeId);dyoutubeFallbackPoster.alt=w.alt||w.title;dyoutubeFallbackLink.href=w.src;
       }else{
-        dyoutube.hidden=false;dyoutube.src=youtubeEmbedUrl(w,true);
+        dyoutube.hidden=false;dyoutube.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');dyoutube.setAttribute('allowfullscreen','');dyoutube.src=youtubeEmbedUrl(w,true);
       }
     }
     else{dimg.src=w.image;dimg.alt=w.alt||w.title}
@@ -97,6 +97,43 @@
     dialog.showModal();
   }
   function closeDialog(){dvideo.pause();dyoutube.removeAttribute('src');dyoutubeFallback.hidden=true;dialog.close();resetZoom()}
+
+  const dprev=qs('.dialog-prev'),dnext=qs('.dialog-next');
+
+  function navigationList(){
+    if(!current)return [];
+
+    // Keep navigation inside the same collection so Fine Art does not jump
+    // into tattoos, videos, jewelry, or objects unexpectedly.
+    if(current.category){
+      return DATA.works.filter(w=>w.category===current.category);
+    }
+
+    return DATA.works.filter(w=>!isMotion(w));
+  }
+
+  function navigateDialog(direction){
+    const list=navigationList();
+    if(!list.length||!current)return;
+
+    const currentIndex=list.findIndex(w=>w.id===current.id);
+    const safeIndex=currentIndex<0?0:currentIndex;
+    const nextIndex=(safeIndex+direction+list.length)%list.length;
+    openWork(list[nextIndex].id);
+  }
+
+  dprev?.addEventListener('click',e=>{
+    e.preventDefault();
+    e.stopPropagation();
+    navigateDialog(-1);
+  });
+
+  dnext?.addEventListener('click',e=>{
+    e.preventDefault();
+    e.stopPropagation();
+    navigateDialog(1);
+  });
+
   document.addEventListener('click',e=>{
     const youtubeOpen=e.target.closest('[data-youtube-open]');if(youtubeOpen){openWork(youtubeOpen.dataset.youtubeOpen);return}
     const expand=e.target.closest('.video-expand');if(expand){openWork(expand.dataset.id);return}
@@ -107,6 +144,17 @@
   qs('.dialog-close').addEventListener('click',closeDialog);
   dialog.addEventListener('click',e=>{if(e.target===dialog)closeDialog()});
   dialog.addEventListener('cancel',e=>{e.preventDefault();closeDialog()});
+
+  document.addEventListener('keydown',e=>{
+    if(!dialog.open)return;
+    if(e.key==='ArrowLeft'){
+      e.preventDefault();
+      navigateDialog(-1);
+    }else if(e.key==='ArrowRight'){
+      e.preventDefault();
+      navigateDialog(1);
+    }
+  });
 
   const menu=qs('.menu-button'),panel=qs('.mobile-panel');
   menu.addEventListener('click',()=>{const o=panel.classList.toggle('open');menu.setAttribute('aria-expanded',String(o));panel.setAttribute('aria-hidden',String(!o))});
