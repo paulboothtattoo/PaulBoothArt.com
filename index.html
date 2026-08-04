@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Michroma&family=Oxanium:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20260804-booking-card-no-circle" />
+  <link rel="stylesheet" href="styles.css?v=20260804-centered-realm-dialog-nav" />
   <link rel="stylesheet" href="image-protection.css?v=20260802" />
   <style id="paulboothart-larger-header">
     .site-header {
@@ -538,6 +538,115 @@
         0 28px 60px rgba(0, 0, 0, .68) !important;
     }
 
+
+
+    /* =========================================================
+       REALM IMAGE CENTERING + FULLSCREEN PREVIOUS/NEXT CONTROLS
+       ========================================================= */
+    #realm-grid .realm-card,
+    #realm-grid .realm-card-graphic {
+      overflow: hidden !important;
+    }
+
+    #realm-grid .realm-card img,
+    #realm-grid .realm-card-image,
+    #realm-grid .booking-realm-card img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      object-position: 50% 50% !important;
+      transform-origin: center center !important;
+    }
+
+    .project-dialog .dialog-visual {
+      position: relative !important;
+    }
+
+    .project-dialog .dialog-nav {
+      position: absolute !important;
+      top: 50% !important;
+      z-index: 90 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 54px !important;
+      height: 72px !important;
+      padding: 0 !important;
+      border: 1px solid rgba(211, 158, 88, .82) !important;
+      border-radius: 14px !important;
+      background: rgba(5, 5, 5, .82) !important;
+      color: #fff2dc !important;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 239, 207, .10),
+        0 12px 30px rgba(0, 0, 0, .48) !important;
+      transform: translateY(-50%) !important;
+      cursor: pointer !important;
+      transition:
+        transform .2s ease,
+        border-color .2s ease,
+        background .2s ease,
+        box-shadow .2s ease !important;
+    }
+
+    .project-dialog .dialog-prev {
+      left: 18px !important;
+    }
+
+    .project-dialog .dialog-next {
+      right: 18px !important;
+    }
+
+    .project-dialog .dialog-nav span {
+      display: block !important;
+      font-family: Arial, Helvetica, sans-serif !important;
+      font-size: 44px !important;
+      font-weight: 300 !important;
+      line-height: .8 !important;
+      transform: translateY(-2px) !important;
+      pointer-events: none !important;
+    }
+
+    .project-dialog .dialog-nav:hover,
+    .project-dialog .dialog-nav:focus-visible {
+      border-color: #efbd78 !important;
+      background: rgba(77, 28, 13, .94) !important;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 244, 218, .16),
+        0 0 26px rgba(167, 54, 22, .30),
+        0 16px 36px rgba(0, 0, 0, .56) !important;
+      outline: none !important;
+    }
+
+    .project-dialog .dialog-prev:hover,
+    .project-dialog .dialog-prev:focus-visible {
+      transform: translateY(-50%) translateX(-2px) !important;
+    }
+
+    .project-dialog .dialog-next:hover,
+    .project-dialog .dialog-next:focus-visible {
+      transform: translateY(-50%) translateX(2px) !important;
+    }
+
+    @media (max-width: 760px) {
+      .project-dialog .dialog-nav {
+        width: 44px !important;
+        height: 60px !important;
+        border-radius: 12px !important;
+      }
+
+      .project-dialog .dialog-prev {
+        left: 8px !important;
+      }
+
+      .project-dialog .dialog-next {
+        right: 8px !important;
+      }
+
+      .project-dialog .dialog-nav span {
+        font-size: 36px !important;
+      }
+    }
+
   </style>
 
 </head>
@@ -628,6 +737,8 @@
   <dialog class="project-dialog" id="project-dialog">
     <button class="dialog-close" type="button" aria-label="Close artwork"></button>
     <div class="dialog-visual">
+      <button class="dialog-nav dialog-prev" type="button" aria-label="Previous artwork"><span aria-hidden="true">&#8249;</span></button>
+      <button class="dialog-nav dialog-next" type="button" aria-label="Next artwork"><span aria-hidden="true">&#8250;</span></button>
       <img class="dialog-image" alt="" />
       <video class="dialog-video" controls playsinline preload="metadata"></video>
       <iframe class="dialog-youtube" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -708,6 +819,93 @@
 
       window.addEventListener("load", run, { once: true });
       setTimeout(addBookingRealmCard, 500);
+    })();
+  </script>
+
+
+  <script>
+    (() => {
+      const dialog = document.getElementById("project-dialog");
+      if (!dialog) return;
+
+      const previousButton = dialog.querySelector(".dialog-prev");
+      const nextButton = dialog.querySelector(".dialog-next");
+      let currentOpener = null;
+
+      const getOpeners = () => {
+        const selectors = [
+          "#project-grid [data-open-id]",
+          "#project-grid .project-open",
+          "#project-grid [data-project]",
+          ".tattoo-feature[data-open-id]",
+          ".motion-screen[data-open-id]",
+          "#object-grid [data-open-id]",
+          "#video-grid [data-open-id]"
+        ].join(",");
+
+        return Array.from(document.querySelectorAll(selectors)).filter(element => {
+          const style = window.getComputedStyle(element);
+          return !element.hidden &&
+            style.display !== "none" &&
+            style.visibility !== "hidden";
+        });
+      };
+
+      document.addEventListener("click", event => {
+        const opener = event.target.closest(
+          "[data-open-id], .project-open, [data-project]"
+        );
+        if (opener && !opener.closest("#project-dialog")) {
+          currentOpener = opener;
+        }
+      }, true);
+
+      const navigate = direction => {
+        const openers = getOpeners();
+        if (!openers.length) return;
+
+        let index = currentOpener ? openers.indexOf(currentOpener) : -1;
+        if (index < 0) index = 0;
+
+        const nextIndex = (index + direction + openers.length) % openers.length;
+        const target = openers[nextIndex];
+        currentOpener = target;
+
+        if (dialog.open) {
+          dialog.close();
+        }
+
+        window.setTimeout(() => {
+          target.scrollIntoView({ block: "nearest", inline: "nearest" });
+          target.click();
+        }, 30);
+      };
+
+      previousButton?.addEventListener("click", event => {
+        event.preventDefault();
+        event.stopPropagation();
+        navigate(-1);
+      });
+
+      nextButton?.addEventListener("click", event => {
+        event.preventDefault();
+        event.stopPropagation();
+        navigate(1);
+      });
+
+      document.addEventListener("keydown", event => {
+        if (!dialog.open) return;
+
+        if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          navigate(-1);
+        }
+
+        if (event.key === "ArrowRight") {
+          event.preventDefault();
+          navigate(1);
+        }
+      });
     })();
   </script>
 
