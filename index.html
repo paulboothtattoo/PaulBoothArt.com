@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Michroma&family=Oxanium:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20260804-tattoo-contact-form" />
+  <link rel="stylesheet" href="styles.css?v=20260804-contact-form-guaranteed" />
   <link rel="stylesheet" href="image-protection.css?v=20260802" />
   <style id="paulboothart-larger-header">
     .site-header {
@@ -732,74 +732,52 @@
 
 
     /* =========================================================
-       TATTOO CONTACT FORM
+       GUARANTEED TATTOO CONTACT FORM
        ========================================================= */
-    .tattoo-contact-shell {
-      display: grid !important;
-      grid-template-columns: minmax(240px, .72fr) minmax(0, 1.6fr) !important;
-      gap: clamp(28px, 4vw, 64px) !important;
-      align-items: start !important;
-      margin-top: clamp(42px, 6vw, 76px) !important;
-      padding: clamp(26px, 4vw, 48px) !important;
-      border: 1px solid rgba(200, 143, 77, .66) !important;
-      background:
-        linear-gradient(180deg, rgba(35, 19, 13, .94), rgba(8, 8, 8, .97)) !important;
+    .tattoo-contact-form-shell {
+      margin-top: 42px !important;
+      padding: clamp(24px, 4vw, 46px) !important;
+      border: 1px solid rgba(205, 148, 80, .72) !important;
+      background: linear-gradient(180deg, rgba(38, 20, 13, .95), rgba(8, 8, 8, .98)) !important;
       box-shadow:
-        inset 0 1px 0 rgba(255, 237, 204, .08),
-        0 24px 58px rgba(0, 0, 0, .52) !important;
+        inset 0 1px 0 rgba(255, 238, 206, .08),
+        0 24px 58px rgba(0, 0, 0, .54) !important;
     }
 
-    .tattoo-contact-intro {
-      position: sticky !important;
-      top: 110px !important;
-    }
-
-    .tattoo-contact-intro h3 {
-      margin: 12px 0 18px !important;
-      color: #fff2dd !important;
+    .tattoo-contact-form-shell h3 {
+      margin: 0 0 10px !important;
+      color: #fff1dc !important;
       font-family: "Cinzel", Georgia, serif !important;
-      font-size: clamp(28px, 3vw, 44px) !important;
+      font-size: clamp(30px, 4vw, 50px) !important;
       line-height: 1.08 !important;
     }
 
-    .tattoo-contact-intro p {
-      margin: 0 !important;
-      color: rgba(235, 220, 199, .78) !important;
-      font-size: 15px !important;
-      line-height: 1.7 !important;
+    .tattoo-contact-form-shell > p {
+      margin: 0 0 28px !important;
+      color: rgba(236, 220, 198, .76) !important;
+      line-height: 1.65 !important;
     }
 
     .tattoo-contact-form {
-      display: block !important;
-    }
-
-    .tattoo-form-grid {
       display: grid !important;
       grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-      gap: 20px !important;
+      gap: 18px !important;
     }
 
-    .tattoo-form-field {
+    .tattoo-contact-form label {
       display: flex !important;
       flex-direction: column !important;
-      gap: 9px !important;
-    }
-
-    .tattoo-form-field--wide {
-      grid-column: 1 / -1 !important;
-    }
-
-    .tattoo-form-field > span,
-    .tattoo-file-field small {
+      gap: 8px !important;
+      color: #e6c592 !important;
       font-family: "Oxanium", sans-serif !important;
-    }
-
-    .tattoo-form-field > span {
-      color: #e7c795 !important;
       font-size: 11px !important;
       font-weight: 600 !important;
-      letter-spacing: .13em !important;
+      letter-spacing: .12em !important;
       text-transform: uppercase !important;
+    }
+
+    .tattoo-contact-form .wide {
+      grid-column: 1 / -1 !important;
     }
 
     .tattoo-contact-form input,
@@ -808,110 +786,74 @@
       width: 100% !important;
       min-height: 50px !important;
       padding: 13px 15px !important;
-      border: 1px solid rgba(171, 126, 72, .54) !important;
+      border: 1px solid rgba(177, 128, 71, .58) !important;
       border-radius: 10px !important;
-      background: rgba(4, 5, 5, .78) !important;
-      color: #fff4e4 !important;
+      background: rgba(4, 5, 5, .82) !important;
+      color: #fff4e5 !important;
       font: inherit !important;
       outline: none !important;
-      transition:
-        border-color .2s ease,
-        box-shadow .2s ease,
-        background .2s ease !important;
     }
 
     .tattoo-contact-form textarea {
-      min-height: 118px !important;
+      min-height: 130px !important;
       resize: vertical !important;
     }
 
     .tattoo-contact-form input:focus,
     .tattoo-contact-form select:focus,
     .tattoo-contact-form textarea:focus {
-      border-color: #dda661 !important;
-      background: rgba(12, 9, 7, .92) !important;
-      box-shadow: 0 0 0 3px rgba(184, 83, 31, .15) !important;
+      border-color: #e1aa67 !important;
+      box-shadow: 0 0 0 3px rgba(184, 76, 30, .16) !important;
     }
 
-    .tattoo-contact-form input::placeholder,
-    .tattoo-contact-form textarea::placeholder {
-      color: rgba(229, 215, 195, .39) !important;
-    }
-
-    .tattoo-file-field input[type="file"] {
-      padding: 10px !important;
-      cursor: pointer !important;
-    }
-
-    .tattoo-file-field small,
-    .tattoo-form-note {
-      color: rgba(227, 211, 189, .52) !important;
-      font-size: 11px !important;
-      line-height: 1.5 !important;
-    }
-
-    .tattoo-form-consent {
+    .tattoo-contact-form .consent {
+      grid-column: 1 / -1 !important;
       display: flex !important;
+      flex-direction: row !important;
       align-items: flex-start !important;
-      gap: 12px !important;
-      margin: 22px 0 !important;
-      color: rgba(239, 224, 203, .76) !important;
+      gap: 11px !important;
+      color: rgba(238, 221, 199, .75) !important;
+      font-family: inherit !important;
       font-size: 13px !important;
-      line-height: 1.55 !important;
-      cursor: pointer !important;
+      font-weight: 400 !important;
+      letter-spacing: 0 !important;
+      line-height: 1.5 !important;
+      text-transform: none !important;
     }
 
-    .tattoo-form-consent input {
-      flex: 0 0 auto !important;
+    .tattoo-contact-form .consent input {
       width: 18px !important;
       height: 18px !important;
       min-height: 18px !important;
+      flex: 0 0 auto !important;
       margin-top: 2px !important;
-      accent-color: #b36c35 !important;
     }
 
-    .tattoo-form-submit {
+    .tattoo-contact-form button {
+      grid-column: 1 / -1 !important;
       width: 100% !important;
       justify-content: center !important;
-      border: 0 !important;
+      border: 1px solid rgba(231, 176, 105, .94) !important;
       cursor: pointer !important;
     }
 
-    .tattoo-form-note {
-      margin: 13px 0 0 !important;
-      text-align: center !important;
-    }
-
-    .form-honeypot {
+    .tattoo-contact-form .honeypot {
       position: absolute !important;
       left: -9999px !important;
       width: 1px !important;
       height: 1px !important;
       opacity: 0 !important;
-      pointer-events: none !important;
     }
 
-    @media (max-width: 900px) {
-      .tattoo-contact-shell {
+    @media (max-width: 700px) {
+      .tattoo-contact-form {
         grid-template-columns: 1fr !important;
       }
 
-      .tattoo-contact-intro {
-        position: static !important;
-      }
-    }
-
-    @media (max-width: 620px) {
-      .tattoo-form-grid {
-        grid-template-columns: 1fr !important;
-      }
-
-      .tattoo-form-field--wide {
-        grid-column: auto !important;
-      }
-
-      .tattoo-contact-shell {
-        padding: 22px 16px !important;
+      .tattoo-contact-form .wide,
+      .tattoo-contact-form .consent,
+      .tattoo-contact-form button {
+        grid-column: 1 !important;
       }
     }
 
@@ -995,90 +937,7 @@
 
     <section id="about" class="about section-shell reveal"><div class="about-photo-frame"><img src="content/images/PB_headshot01.jpg" alt="Paul Booth portrait" /><span class="photo-index">PB / 001</span></div><div class="about-copy"><span class="eyebrow">About Paul Booth</span><h2>Artist. Tattooist. Sculptor. Filmmaker.</h2><p class="lead">Nearly four decades at the crossroads of dark surrealism, gothic artistry, and countercultural defiance.</p><p>Paul Booth has forged a singular visual language that explores the macabre, the psychological, and the taboo. His work across canvas, skin, sculpture, film, music, and immersive environments confronts the shadowed recesses of the human condition.</p><details><summary>Read the full biography</summary><p>Booth's early work emerged from a deeply personal need to give form to internal chaos. In the 1990s his visceral aesthetic reached the cultural mainstream through tattoo work for major figures in heavy music and performance. His Last Rites Tattoo Theatre & Gallery became a three-story Gothic landmark in Manhattan and a physical portal into his imagination. His work has since been exhibited internationally and featured across major publications, while the Last Rites world expanded into fashion, jewelry, home d&eacute;cor, film, and music.</p></details></div><div class="about-reliquary" aria-hidden="true"><div class="reliquary-figure"></div></div></section>
 
-    <section id="appointment" class="appointment appointment-featured section-shell"><div class="section-heading reveal split-heading"><div><span class="eyebrow">Tattoo Appointment Protocol</span><h2>Book a Tattoo</h2></div><p>Paul currently works in New Jersey, approximately 35 minutes west of midtown Manhattan.</p></div><div class="appointment-grid"><article class="protocol-card reveal"><span>01</span><h3>Send the Concept</h3><p>Email your idea or theme, a photo of the area to be tattooed, and any budgetary information.</p></article><article class="protocol-card reveal"><span>02</span><h3>Freehand Interpretation</h3><p>Paul works mainly freehand and develops your ideas through his own visual interpretation.</p></article><article class="protocol-card reveal"><span>03</span><h3>Reserve the Session</h3><p>A $500 deposit holds the appointment and is applied toward the tattoo. Cancellations or rescheduling require 48 hours' notice.</p></article><article class="protocol-card reveal"><span>04</span><h3>Travel & Timing</h3><p>Newark Liberty International Airport (EWR) is the closest airport. Large-scale work can move quickly; a back piece may be completed in 8&ndash;10 hours.</p></article></div>
-<div class="tattoo-contact-shell reveal">
-  <div class="tattoo-contact-intro">
-    <span class="eyebrow">Private Project Submission</span>
-    <h3>Start Your Tattoo Inquiry</h3>
-    <p>Send the project details directly through this secure inquiry form. Include the body area, concept, timing, and any reference material that will help Paul evaluate the project.</p>
-  </div>
-
-  <form
-    class="tattoo-contact-form"
-    action="https://formsubmit.co/lastritestattoo@gmail.com"
-    method="POST"
-    enctype="multipart/form-data"
-  >
-    <input type="hidden" name="_subject" value="New PaulBoothArt.com Tattoo Inquiry">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_captcha" value="true">
-    <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off">
-
-    <div class="tattoo-form-grid">
-      <label class="tattoo-form-field">
-        <span>Name *</span>
-        <input type="text" name="Name" autocomplete="name" required>
-      </label>
-
-      <label class="tattoo-form-field">
-        <span>Email *</span>
-        <input type="email" name="Email" autocomplete="email" required>
-      </label>
-
-      <label class="tattoo-form-field">
-        <span>Phone</span>
-        <input type="tel" name="Phone" autocomplete="tel">
-      </label>
-
-      <label class="tattoo-form-field">
-        <span>Preferred contact method</span>
-        <select name="Preferred contact method">
-          <option value="Email">Email</option>
-          <option value="Phone">Phone</option>
-          <option value="Text message">Text message</option>
-        </select>
-      </label>
-
-      <label class="tattoo-form-field">
-        <span>Body area *</span>
-        <input type="text" name="Body area" placeholder="Back, chest, sleeve, leg, etc." required>
-      </label>
-
-      <label class="tattoo-form-field">
-        <span>Estimated budget</span>
-        <input type="text" name="Estimated budget" placeholder="Optional">
-      </label>
-
-      <label class="tattoo-form-field tattoo-form-field--wide">
-        <span>Project concept *</span>
-        <textarea name="Project concept" rows="6" placeholder="Describe the imagery, theme, scale, and any important details." required></textarea>
-      </label>
-
-      <label class="tattoo-form-field tattoo-form-field--wide">
-        <span>Timing and availability</span>
-        <textarea name="Timing and availability" rows="3" placeholder="Preferred dates, travel considerations, or scheduling restrictions."></textarea>
-      </label>
-
-      <label class="tattoo-form-field tattoo-form-field--wide tattoo-file-field">
-        <span>Reference image</span>
-        <input type="file" name="Reference image" accept="image/*,.pdf">
-        <small>Upload a clear photo of the body area or relevant visual reference.</small>
-      </label>
-    </div>
-
-    <label class="tattoo-form-consent">
-      <input type="checkbox" name="Deposit acknowledgment" value="Acknowledged" required>
-      <span>I understand that approved appointments require a $500 deposit and that submitting this form does not confirm an appointment.</span>
-    </label>
-
-    <button class="primary-button appointment-cta tattoo-form-submit" type="submit">
-      Send tattoo inquiry <span>&rarr;</span>
-    </button>
-
-    <p class="tattoo-form-note">Your information is used only to evaluate and respond to your tattoo inquiry.</p>
-  </form>
-</div>
-</section>
+    <section id="appointment" class="appointment appointment-featured section-shell"><div class="section-heading reveal split-heading"><div><span class="eyebrow">Tattoo Appointment Protocol</span><h2>Book a Tattoo</h2></div><p>Paul currently works in New Jersey, approximately 35 minutes west of midtown Manhattan.</p></div><div class="appointment-grid"><article class="protocol-card reveal"><span>01</span><h3>Send the Concept</h3><p>Email your idea or theme, a photo of the area to be tattooed, and any budgetary information.</p></article><article class="protocol-card reveal"><span>02</span><h3>Freehand Interpretation</h3><p>Paul works mainly freehand and develops your ideas through his own visual interpretation.</p></article><article class="protocol-card reveal"><span>03</span><h3>Reserve the Session</h3><p>A $500 deposit holds the appointment and is applied toward the tattoo. Cancellations or rescheduling require 48 hours' notice.</p></article><article class="protocol-card reveal"><span>04</span><h3>Travel & Timing</h3><p>Newark Liberty International Airport (EWR) is the closest airport. Large-scale work can move quickly; a back piece may be completed in 8&ndash;10 hours.</p></article></div><a class="primary-button appointment-cta" href="mailto:lastritestattoo@gmail.com?subject=Tattoo%20Appointment%20Inquiry">Start an appointment inquiry <span>&rarr;</span></a></section>
 
     <section id="contact" class="signal section-shell reveal"><div><span class="eyebrow">Contact Channel</span><h2>Enter the Conversation</h2><p>Original artwork, exhibitions, tattoo projects, licensing, press, and collaborations.</p></div><div class="signal-actions"><a href="mailto:lastritestattoo@gmail.com" class="secondary-button">Email Last Rites <span>&rarr;</span></a><a href="https://www.instagram.com/paulbooth.ai/" target="_blank" rel="noopener noreferrer" class="secondary-button">Instagram <span>&#8599;</span></a><a href="https://www.youtube.com/@paulboothart" target="_blank" rel="noopener noreferrer" class="secondary-button">YouTube <span>&#8599;</span></a></div></section>
   </main>
@@ -1108,7 +967,7 @@
       <div class="dialog-actions"><button class="secondary-button dialog-zoom" type="button">View actual size</button><a class="secondary-button dialog-email" href="mailto:lastritestattoo@gmail.com">Inquire <span>&rarr;</span></a></div>
     </div>
   </dialog>
-  <script src="content.js?v=20260804-local-watermarked-images"></script><script src="script.js?v=20260804-guaranteed-booking-card"></script><script src="image-protection.js?v=20260802"></script>
+  <script src="content.js?v=20260804-local-watermarked-images"></script><script src="script.js?v=20260804-contact-form-guaranteed"></script><script src="image-protection.js?v=20260802"></script>
 
 
   <script>
@@ -1194,6 +1053,108 @@
           navigate(1);
         }
       });
+    })();
+  </script>
+
+
+  <script>
+    (() => {
+      const installTattooContactForm = () => {
+        const appointment = document.getElementById("appointment");
+        if (!appointment || appointment.querySelector(".tattoo-contact-form-shell")) return;
+
+        const oldMailto = appointment.querySelector('a[href^="mailto:"]');
+        if (oldMailto) oldMailto.remove();
+
+        const shell = document.createElement("div");
+        shell.className = "tattoo-contact-form-shell reveal visible";
+        shell.innerHTML = `
+          <span class="eyebrow">Private Project Submission</span>
+          <h3>Start Your Tattoo Inquiry</h3>
+          <p>Send your project details directly through this form. Include the body area, concept, timing, budget, and any reference material that will help evaluate the project.</p>
+
+          <form class="tattoo-contact-form" action="https://formsubmit.co/lastritestattoo@gmail.com" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_subject" value="New PaulBoothArt.com Tattoo Inquiry">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="true">
+            <input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off">
+
+            <label>
+              Name *
+              <input type="text" name="Name" autocomplete="name" required>
+            </label>
+
+            <label>
+              Email *
+              <input type="email" name="Email" autocomplete="email" required>
+            </label>
+
+            <label>
+              Phone
+              <input type="tel" name="Phone" autocomplete="tel">
+            </label>
+
+            <label>
+              Preferred contact method
+              <select name="Preferred contact method">
+                <option>Email</option>
+                <option>Phone</option>
+                <option>Text message</option>
+              </select>
+            </label>
+
+            <label>
+              Body area *
+              <input type="text" name="Body area" placeholder="Back, chest, sleeve, leg, etc." required>
+            </label>
+
+            <label>
+              Estimated budget
+              <input type="text" name="Estimated budget" placeholder="Optional">
+            </label>
+
+            <label class="wide">
+              Project concept *
+              <textarea name="Project concept" placeholder="Describe the imagery, theme, scale, and important details." required></textarea>
+            </label>
+
+            <label class="wide">
+              Timing and availability
+              <textarea name="Timing and availability" rows="3" placeholder="Preferred dates, travel plans, or scheduling restrictions."></textarea>
+            </label>
+
+            <label class="wide">
+              Reference image
+              <input type="file" name="Reference image" accept="image/*,.pdf">
+            </label>
+
+            <label class="consent">
+              <input type="checkbox" name="Deposit acknowledgment" value="Acknowledged" required>
+              <span>I understand that approved appointments require a $500 deposit and that submitting this form does not confirm an appointment.</span>
+            </label>
+
+            <button class="primary-button appointment-cta" type="submit">
+              Send tattoo inquiry <span>&rarr;</span>
+            </button>
+          </form>
+        `;
+
+        const appointmentGrid = appointment.querySelector(".appointment-grid");
+        if (appointmentGrid) {
+          appointmentGrid.insertAdjacentElement("afterend", shell);
+        } else {
+          appointment.appendChild(shell);
+        }
+      };
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", installTattooContactForm, { once: true });
+      } else {
+        installTattooContactForm();
+      }
+
+      window.addEventListener("load", installTattooContactForm, { once: true });
+      setTimeout(installTattooContactForm, 500);
     })();
   </script>
 
