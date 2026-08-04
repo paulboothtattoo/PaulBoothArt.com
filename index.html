@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Michroma&family=Oxanium:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20260804-realm-images-centered-final" />
+  <link rel="stylesheet" href="styles.css?v=20260804-realm-cards-centered" />
   <link rel="stylesheet" href="image-protection.css?v=20260802" />
   <style id="paulboothart-larger-header">
     .site-header {
@@ -682,6 +682,51 @@
     #realm-grid [class*="shade"] {
       position: relative !important;
       z-index: 2 !important;
+    }
+
+
+
+    /* =========================================================
+       EXPLORE THE REALMS — CENTER THE CARDS WITHIN THE PANEL
+       ========================================================= */
+    #realm-grid.realm-grid {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      align-items: stretch !important;
+      justify-content: center !important;
+      gap: clamp(12px, 1.2vw, 20px) !important;
+      width: 100% !important;
+    }
+
+    #realm-grid.realm-grid > * {
+      flex: 0 1 calc((100% - 60px) / 4) !important;
+      width: calc((100% - 60px) / 4) !important;
+      min-width: 240px !important;
+      max-width: 360px !important;
+      margin: 0 !important;
+    }
+
+    @media (max-width: 1180px) {
+      #realm-grid.realm-grid > * {
+        flex-basis: calc((100% - 40px) / 3) !important;
+        width: calc((100% - 40px) / 3) !important;
+      }
+    }
+
+    @media (max-width: 860px) {
+      #realm-grid.realm-grid > * {
+        flex-basis: calc((100% - 20px) / 2) !important;
+        width: calc((100% - 20px) / 2) !important;
+        max-width: none !important;
+      }
+    }
+
+    @media (max-width: 560px) {
+      #realm-grid.realm-grid > * {
+        flex-basis: 100% !important;
+        width: 100% !important;
+        min-width: 0 !important;
+      }
     }
 
   </style>
