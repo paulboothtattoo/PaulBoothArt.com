@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Michroma&family=Oxanium:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20260804-remove-duplicate-booking-card" />
+  <link rel="stylesheet" href="styles.css?v=20260804-realm-images-centered-final" />
   <link rel="stylesheet" href="image-protection.css?v=20260802" />
   <style id="paulboothart-larger-header">
     .site-header {
@@ -645,6 +645,43 @@
       .project-dialog .dialog-nav span {
         font-size: 36px !important;
       }
+    }
+
+
+
+    /* =========================================================
+       EXPLORE THE REALMS — FORCE ALL IMAGES TO TRUE CENTER
+       ========================================================= */
+    #realm-grid .realm-card,
+    #realm-grid .realm-card-graphic {
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    #realm-grid .realm-card > img,
+    #realm-grid .realm-card-graphic > img,
+    #realm-grid img.realm-card-image,
+    #realm-grid .realm-card img,
+    #realm-grid .realm-card-graphic img {
+      position: absolute !important;
+      inset: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      max-width: none !important;
+      max-height: none !important;
+      margin: 0 !important;
+      object-fit: cover !important;
+      object-position: center center !important;
+      transform: none !important;
+      transform-origin: center center !important;
+    }
+
+    #realm-grid .realm-card-copy,
+    #realm-grid .realm-card-shade,
+    #realm-grid [class*="copy"],
+    #realm-grid [class*="shade"] {
+      position: relative !important;
+      z-index: 2 !important;
     }
 
   </style>
