@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Michroma&family=Oxanium:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20260804-single-close-x" />
+  <link rel="stylesheet" href="styles.css?v=20260804-definitive-single-x" />
   <link rel="stylesheet" href="image-protection.css?v=20260802" />
   <style id="paulboothart-larger-header">
     .site-header {
@@ -427,6 +427,45 @@
       line-height: 1 !important;
     }
 
+
+
+    /* =========================================================
+       IMAGE DIALOG CLOSE — DEFINITIVE SINGLE X
+       Empty button; one CSS pseudo-element only.
+       ========================================================= */
+    .project-dialog .dialog-close {
+      font-size: 0 !important;
+      text-indent: -9999px !important;
+      overflow: hidden !important;
+    }
+
+    .project-dialog .dialog-close > * {
+      display: none !important;
+    }
+
+    .project-dialog .dialog-close::after {
+      content: none !important;
+      display: none !important;
+    }
+
+    .project-dialog .dialog-close::before {
+      content: "X" !important;
+      position: absolute !important;
+      inset: 0 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 100% !important;
+      height: 100% !important;
+      color: #fff4e3 !important;
+      font-family: Arial, Helvetica, sans-serif !important;
+      font-size: 24px !important;
+      font-weight: 400 !important;
+      line-height: 1 !important;
+      text-indent: 0 !important;
+      pointer-events: none !important;
+    }
+
   </style>
 
 </head>
@@ -515,7 +554,7 @@
   <footer class="site-footer section-shell"><div class="footer-brand"><span class="mini-brand-mark">PB</span><div><strong>PAULBOOTHART.COM</strong><p>Fine art. Tattoo legacy. Dark surrealism.</p></div></div><div class="footer-links"><div><span>Collections</span><a href="#fine-art">Fine Arts</a><a href="#tattoo-art">Tattoo Art</a><a href="#video-art">Video Art</a><a href="#objects">Objects</a></div><div><span>Information</span><a href="#about">About</a><a href="#appointment">Appointments</a><a href="#contact">Contact</a></div><div><span>Sister Site</span><a href="https://paulbooth.ai/" target="_blank" rel="noopener noreferrer">PaulBooth.ai &#8599;</a></div></div><div class="footer-bottom"><span>&copy; <span id="year"></span> Paul Booth. All rights reserved.</span><span>PaulBoothArt.com</span></div></footer>
 
   <dialog class="project-dialog" id="project-dialog">
-    <button class="dialog-close" type="button" aria-label="Close artwork"><span aria-hidden="true">X</span></button>
+    <button class="dialog-close" type="button" aria-label="Close artwork"></button>
     <div class="dialog-visual">
       <img class="dialog-image" alt="" />
       <video class="dialog-video" controls playsinline preload="metadata"></video>
