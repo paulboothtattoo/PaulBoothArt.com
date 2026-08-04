@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Michroma&family=Oxanium:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20260804-centered-realm-dialog-nav" />
+  <link rel="stylesheet" href="styles.css?v=20260804-remove-duplicate-booking-card" />
   <link rel="stylesheet" href="image-protection.css?v=20260802" />
   <style id="paulboothart-larger-header">
     .site-header {
@@ -758,69 +758,6 @@
     </div>
   </dialog>
   <script src="content.js?v=20260804-local-watermarked-images"></script><script src="script.js?v=20260804-guaranteed-booking-card"></script><script src="image-protection.js?v=20260802"></script>
-
-  <script>
-    (() => {
-      const addBookingRealmCard = () => {
-        const grid = document.getElementById("realm-grid");
-        if (!grid || grid.querySelector(".booking-realm-card")) return;
-
-        const existingCards = Array.from(grid.children);
-        const tattooCard =
-          existingCards.find(card => {
-            const title = card.querySelector("h3");
-            return title && title.textContent.trim().toLowerCase() === "tattoo art";
-          }) || existingCards[1] || existingCards[0];
-
-        if (!tattooCard) return;
-
-        const card = tattooCard.cloneNode(true);
-        card.classList.add("booking-realm-card");
-        const badge = document.createElement("span");
-        badge.className = "booking-badge";
-        badge.textContent = "BOOK NOW";
-        card.appendChild(badge);
-        card.href = "#appointment";
-        card.setAttribute("aria-label", "Book a tattoo with Paul Booth");
-
-        const title = card.querySelector("h3");
-        if (title) title.textContent = "Book a Tattoo";
-
-        const description = card.querySelector("p");
-        if (description) {
-          description.textContent = "Appointments / Consultation / Project Inquiry";
-        }
-
-        const number =
-          card.querySelector(".realm-number") ||
-          card.querySelector("[class*='number']") ||
-          card.querySelector("span");
-
-        if (number && /realm/i.test(number.textContent)) {
-          number.textContent = "06 / REALM";
-        }
-
-        const image = card.querySelector("img");
-        if (image) {
-          image.src = "content/images/IMG_9975.jpg";
-          image.alt = "Book a tattoo with Paul Booth";
-        }
-
-        grid.appendChild(card);
-      };
-
-      const run = () => requestAnimationFrame(() => requestAnimationFrame(addBookingRealmCard));
-
-      if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", run, { once: true });
-      } else {
-        run();
-      }
-
-      window.addEventListener("load", run, { once: true });
-      setTimeout(addBookingRealmCard, 500);
-    })();
-  </script>
 
 
   <script>
