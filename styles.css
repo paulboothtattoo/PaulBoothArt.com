@@ -760,3 +760,80 @@ main,.site-footer{position:relative;z-index:1}
 @media(prefers-reduced-motion:reduce){
   .hero-red-flicker,.hero-logo-orbit--far,.hero-logo-orbit--mid,.hero-orbital-nodes--one,.hero-orbital-nodes--two,.hero-orbital-nodes--three,.hero-logo-aura{animation:none !important}
 }
+
+
+/* =========================================================
+   VICTORIAN TYPOGRAPHY — 2026-08-05
+   ========================================================= */
+:root {
+  --font-victorian-display: "Cinzel Decorative", "Times New Roman", serif;
+  --font-victorian-body: "Cormorant Garamond", Georgia, serif;
+}
+
+body,
+p,
+li,
+input,
+textarea,
+select {
+  font-family: var(--font-victorian-body) !important;
+}
+
+body {
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: .015em;
+}
+
+h1, h2, h3, h4, h5, h6,
+.hero-title,
+.section-heading h2,
+.statement-panel h2,
+.about h2,
+.motion h3,
+.realm-card h3,
+.project-meta h3,
+.machine-card h3,
+.video-meta h3,
+.dialog-copy h2,
+.youtube-fallback-copy h3,
+.folder-media-copy h3 {
+  font-family: var(--font-victorian-display) !important;
+  font-weight: 400;
+  letter-spacing: .035em;
+}
+
+.mini-brand,
+.desktop-nav a,
+.header-cta,
+.menu-button,
+.mobile-panel a,
+.hero-manifesto,
+.primary-button,
+.secondary-button,
+.text-button,
+.filter,
+.eyebrow,
+.project-meta span,
+.project-number,
+.realm-card p,
+.realm-index,
+.hero-status,
+.youtube-poster-label,
+.folder-tab,
+.folder-media-type,
+.folder-media-copy > span,
+.folder-media-copy a,
+.folder-media-meta span {
+  font-family: var(--font-victorian-display) !important;
+  letter-spacing: .11em;
+}
+
+.mini-brand-mark {
+  font-family: "UnifrakturCook", var(--font-victorian-display) !important;
+}
+
+@media (max-width: 760px) {
+  body { font-size: 17px; }
+  h1, h2, h3, h4, h5, h6 { letter-spacing: .02em; }
+}
