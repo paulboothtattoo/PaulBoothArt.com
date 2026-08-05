@@ -17,7 +17,7 @@ window.PB_ART_CONTENT = {
       "title": "Book a Tattoo",
       "label": "Appointments / Consultation / Project Inquiry",
       "href": "#appointment",
-      "image": "content/images/IMG_9975.jpg"
+      "image": "content/images/book-your-tattoo.jpg"
     },
     {
       "title": "Video Art",
