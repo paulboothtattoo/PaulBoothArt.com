@@ -6,7 +6,7 @@
   <meta name="description" content="PaulBoothArt.com &mdash; fine art, tattoo, sculpture, jewelry, video art, and dark surrealism by Paul Booth." />
   <meta name="theme-color" content="#070706" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <meta name="pb-build" content="fixed-header-same-tab-sister-links-20260804" />
+  <meta name="pb-build" content="crimson-satin-logo-animated-20260806" />
   <title>PaulBoothArt.com &mdash; Fine Arts</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -955,6 +955,94 @@
       .site-header .sister-site-actions { display: none !important; }
     }
 
+
+    /* =========================================================
+       PAULBOOTHART.COM — CRIMSON SATIN LOGO + SUBTLE ANIMATION
+       Uses the supplied transparent logo without a circular frame.
+       ========================================================= */
+    #hero-animation .hero-logo-stage--sigil,
+    #hero-animation .hero-medallion {
+      overflow: visible !important;
+      background: transparent !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      clip-path: none !important;
+      -webkit-clip-path: none !important;
+      mask: none !important;
+      -webkit-mask: none !important;
+    }
+
+    #hero-animation .hero-medallion-depth,
+    #hero-animation .hero-medallion-rim,
+    #hero-animation .hero-medallion-glass {
+      display: none !important;
+    }
+
+    #hero-animation .hero-medallion-face {
+      display: block !important;
+      width: 100% !important;
+      height: 100% !important;
+      max-width: none !important;
+      max-height: none !important;
+      object-fit: contain !important;
+      object-position: center center !important;
+      background: transparent !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      transform-origin: 50% 52% !important;
+      filter:
+        brightness(1.03)
+        contrast(1.08)
+        saturate(1.08)
+        drop-shadow(0 0 10px rgba(255, 48, 30, .26))
+        drop-shadow(0 0 30px rgba(126, 0, 0, .34)) !important;
+      animation: pbArtCrimsonLogoBreath 7.5s ease-in-out infinite !important;
+      will-change: transform, filter;
+    }
+
+    #hero-animation .hero-red-flicker {
+      opacity: .42 !important;
+      animation: pbArtCrimsonAura 5.6s ease-in-out infinite !important;
+    }
+
+    @keyframes pbArtCrimsonLogoBreath {
+      0%, 100% {
+        transform: translate3d(0, 0, 0) scale(1);
+        filter:
+          brightness(1.00)
+          contrast(1.08)
+          saturate(1.05)
+          drop-shadow(0 0 8px rgba(255, 48, 30, .22))
+          drop-shadow(0 0 25px rgba(126, 0, 0, .30));
+      }
+      50% {
+        transform: translate3d(0, -7px, 0) scale(1.018);
+        filter:
+          brightness(1.10)
+          contrast(1.12)
+          saturate(1.15)
+          drop-shadow(0 0 15px rgba(255, 66, 40, .38))
+          drop-shadow(0 0 42px rgba(150, 0, 0, .46));
+      }
+    }
+
+    @keyframes pbArtCrimsonAura {
+      0%, 100% { opacity: .28; transform: scale(.97); }
+      50% { opacity: .55; transform: scale(1.04); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #hero-animation .hero-medallion-face,
+      #hero-animation .hero-red-flicker,
+      #hero-animation .hero-logo-orbit,
+      #hero-animation .hero-orbital-nodes,
+      #hero-animation .hero-logo-sweep {
+        animation: none !important;
+        transform: none !important;
+      }
+    }
+
   </style>
 
 </head>
@@ -999,10 +1087,10 @@
         <div class="hero-orbital-nodes hero-orbital-nodes--three" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
         <div class="hero-logo-aura" aria-hidden="true"></div>
         <div class="hero-logo-plinth" aria-hidden="true"></div>
-        <div class="hero-medallion" aria-label="Paul Booth skull emblem">
+        <div class="hero-medallion" aria-label="Paul Booth Art crimson emblem">
           <div class="hero-medallion-depth" aria-hidden="true"></div>
           <div class="hero-medallion-rim" aria-hidden="true"></div>
-          <img class="hero-medallion-face" src="assets/hero-logo-requested-exact.png" alt="Paul Booth skull emblem" />
+          <img class="hero-medallion-face" src="assets/hero-logo-requested-exact.png" alt="Paul Booth Art crimson satin emblem" />
           <div class="hero-medallion-glass" aria-hidden="true"></div>
         </div>
         <div class="hero-logo-sweep" aria-hidden="true"></div>
