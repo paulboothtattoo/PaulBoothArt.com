@@ -1,0 +1,1387 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PaulBoothArt.com &mdash; fine art, tattoo, sculpture, jewelry, video art, and dark surrealism by Paul Booth." />
+  <meta name="theme-color" content="#070706" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="pb-build" content="fine-art-category-buttons-prominent-20260807" />
+  <title>PaulBoothArt.com &mdash; Fine Arts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=victorian-nav-links-20260805" />
+  <link rel="stylesheet" href="image-protection.css?v=20260802" />
+  <style id="paulboothart-larger-header">
+    .site-header {
+      min-height: 88px;
+      padding: 0 42px;
+      gap: 28px;
+    }
+
+    .mini-brand {
+      gap: 14px;
+      font-size: 15px;
+      letter-spacing: .16em;
+    }
+
+    .mini-brand-mark {
+      width: 48px;
+      height: 48px;
+      font-size: 15px;
+    }
+
+    .desktop-nav {
+      gap: clamp(18px, 2vw, 34px);
+    }
+
+    .desktop-nav a {
+      font-size: 13px;
+    }
+
+    .header-cta {
+      min-height: 46px;
+      padding: 0 20px;
+      font-size: 12px;
+    }
+
+    .menu-button {
+      width: 48px;
+      height: 48px;
+    }
+
+    @media (max-width: 1100px) {
+      .site-header {
+        min-height: 80px;
+        padding: 0 26px;
+        gap: 18px;
+      }
+
+      .desktop-nav {
+        gap: 15px;
+      }
+
+      .desktop-nav a {
+        font-size: 11px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .site-header {
+        min-height: 76px;
+        padding: 0 18px;
+      }
+
+      .mini-brand {
+        font-size: 12px;
+      }
+
+      .mini-brand-mark {
+        width: 42px;
+        height: 42px;
+      }
+    }
+
+    .sister-site-actions {
+      justify-self: end;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sister-site-actions .header-cta {
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(52, 38, 25, .92), rgba(8, 9, 9, .98));
+      box-shadow:
+        inset 0 1px 0 rgba(255, 239, 207, .08),
+        0 8px 24px rgba(0, 0, 0, .36);
+    }
+
+    .sister-site-actions .header-cta::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        110deg,
+        transparent 18%,
+        rgba(255, 232, 191, .14) 44%,
+        transparent 68%
+      );
+      transform: translateX(-130%);
+      transition: transform .55s ease;
+    }
+
+    .sister-site-actions .header-cta:hover::before,
+    .sister-site-actions .header-cta:focus-visible::before {
+      transform: translateX(130%);
+    }
+
+    .sister-site-actions .header-cta:hover,
+    .sister-site-actions .header-cta:focus-visible {
+      color: #fff7e8;
+      border-color: #b38c51;
+      transform: translateY(-1px);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 239, 207, .12),
+        0 0 24px rgba(179, 140, 81, .16),
+        0 10px 28px rgba(0, 0, 0, .48);
+      outline: none;
+    }
+
+    @media (max-width: 1180px) {
+      .sister-site-actions {
+        gap: 7px;
+      }
+
+      .sister-site-actions .header-cta {
+        min-height: 42px;
+        padding: 0 14px;
+        font-size: 10px;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .sister-site-actions {
+        display: none;
+      }
+    }
+
+
+    /* Absolute center correction for sister-site button labels */
+    .sister-site-actions .header-cta {
+      position: relative !important;
+      display: block !important;
+      min-height: 52px !important;
+      padding: 0 24px !important;
+      line-height: normal !important;
+    }
+
+    .sister-site-actions .header-cta-content {
+      position: absolute !important;
+      inset: 0 !important;
+      z-index: 3 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 10px !important;
+      width: 100% !important;
+      height: 100% !important;
+      padding: 0 20px !important;
+      line-height: 1 !important;
+      text-align: center !important;
+      pointer-events: none !important;
+    }
+
+    .sister-site-actions .header-cta-label,
+    .sister-site-actions .header-cta-arrow {
+      position: static !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      line-height: 1 !important;
+      transform: none !important;
+    }
+
+    .sister-site-actions .header-cta-label {
+      font-family: "Cinzel", Georgia, serif !important;
+      font-size: 12px !important;
+      font-weight: 600 !important;
+      letter-spacing: .13em !important;
+    }
+
+    .sister-site-actions .header-cta-arrow {
+      color: #d8aa67 !important;
+      font-family: "Oxanium", sans-serif !important;
+      font-size: 11px !important;
+    }
+
+    .sister-site-actions .header-cta:hover .header-cta-arrow,
+    .sister-site-actions .header-cta:focus-visible .header-cta-arrow {
+      color: #f0c984 !important;
+      transform: translate(2px, -1px) !important;
+    }
+
+    @media (max-width: 1240px) {
+      .sister-site-actions .header-cta {
+        min-height: 46px !important;
+        padding: 0 17px !important;
+      }
+
+      .sister-site-actions .header-cta-label {
+        font-size: 10px !important;
+        letter-spacing: .1em !important;
+      }
+    }
+
+
+
+    /* =========================================================
+       HEADER SISTER BUTTONS + IMAGE CLOSE X â€” AUTHORITATIVE FIX
+       ========================================================= */
+
+    .sister-site-actions {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-end !important;
+      gap: 12px !important;
+      min-width: max-content !important;
+      overflow: visible !important;
+    }
+
+    .sister-site-actions .header-cta {
+      position: relative !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: auto !important;
+      min-width: 154px !important;
+      max-width: none !important;
+      min-height: 46px !important;
+      padding: 0 18px !important;
+      border-radius: 999px !important;
+      overflow: visible !important;
+      white-space: nowrap !important;
+      flex: 0 0 auto !important;
+    }
+
+    .sister-site-actions .header-cta-content {
+      position: static !important;
+      inset: auto !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: auto !important;
+      height: auto !important;
+      padding: 0 !important;
+      gap: 8px !important;
+      white-space: nowrap !important;
+      transform: none !important;
+    }
+
+    .sister-site-actions .header-cta-label {
+      display: inline-block !important;
+      width: auto !important;
+      max-width: none !important;
+      overflow: visible !important;
+      white-space: nowrap !important;
+      text-overflow: clip !important;
+      font-size: 10px !important;
+      letter-spacing: .08em !important;
+      line-height: 1 !important;
+    }
+
+    .sister-site-actions .header-cta-arrow {
+      display: inline-block !important;
+      flex: 0 0 auto !important;
+      font-size: 10px !important;
+      line-height: 1 !important;
+    }
+
+    .dialog-close {
+      position: absolute !important;
+      top: 18px !important;
+      right: 18px !important;
+      z-index: 100 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 48px !important;
+      height: 48px !important;
+      padding: 0 !important;
+      border: 1px solid rgba(210, 164, 96, .85) !important;
+      border-radius: 50% !important;
+      background: rgba(5, 5, 5, .88) !important;
+      color: #fff4e3 !important;
+      font-family: Arial, Helvetica, sans-serif !important;
+      font-size: 0 !important;
+      line-height: 1 !important;
+      cursor: pointer !important;
+    }
+
+    .dialog-close > span,
+    .dialog-close::before {
+      display: block !important;
+      color: #fff4e3 !important;
+      font-family: Arial, Helvetica, sans-serif !important;
+      font-size: 24px !important;
+      font-weight: 400 !important;
+      line-height: 1 !important;
+      content: "X" !important;
+    }
+
+    .dialog-close > span {
+      width: auto !important;
+      height: auto !important;
+    }
+
+    .dialog-close:hover,
+    .dialog-close:focus-visible {
+      border-color: #efbe78 !important;
+      background: rgba(62, 34, 18, .95) !important;
+      outline: none !important;
+    }
+
+    @media (max-width: 1180px) {
+      .sister-site-actions .header-cta {
+        min-width: 138px !important;
+        padding: 0 14px !important;
+      }
+
+      .sister-site-actions .header-cta-label {
+        font-size: 9px !important;
+        letter-spacing: .06em !important;
+      }
+    }
+
+
+
+    /* =========================================================
+       SISTER-SITE LINKS â€” RECTANGULAR BUTTON FIX
+       Prevents the header links from collapsing into round circles.
+       ========================================================= */
+    .site-header .sister-site-actions {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-end !important;
+      gap: 12px !important;
+      width: auto !important;
+      min-width: 360px !important;
+      overflow: visible !important;
+    }
+
+    .site-header .sister-site-actions .header-cta {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex: 0 0 auto !important;
+      width: auto !important;
+      min-width: 168px !important;
+      max-width: none !important;
+      min-height: 46px !important;
+      height: 46px !important;
+      padding: 0 20px !important;
+      border-radius: 14px !important;
+      overflow: visible !important;
+      white-space: nowrap !important;
+    }
+
+    .site-header .sister-site-actions .header-cta-content {
+      position: static !important;
+      inset: auto !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: auto !important;
+      height: auto !important;
+      min-width: 0 !important;
+      padding: 0 !important;
+      gap: 8px !important;
+      white-space: nowrap !important;
+    }
+
+    .site-header .sister-site-actions .header-cta-label {
+      display: inline-block !important;
+      width: auto !important;
+      max-width: none !important;
+      overflow: visible !important;
+      white-space: nowrap !important;
+      text-overflow: clip !important;
+    }
+
+    @media (max-width: 1240px) and (min-width: 981px) {
+      .site-header .sister-site-actions {
+        min-width: 310px !important;
+        gap: 8px !important;
+      }
+
+      .site-header .sister-site-actions .header-cta {
+        min-width: 148px !important;
+        padding: 0 14px !important;
+        border-radius: 12px !important;
+      }
+    }
+
+
+
+    /* =========================================================
+       IMAGE DIALOG CLOSE BUTTON â€” SINGLE X ONLY
+       ========================================================= */
+    .dialog-close::before,
+    .dialog-close::after {
+      content: none !important;
+      display: none !important;
+    }
+
+    .dialog-close > span {
+      display: block !important;
+      color: #fff4e3 !important;
+      font-family: Arial, Helvetica, sans-serif !important;
+      font-size: 24px !important;
+      font-weight: 400 !important;
+      line-height: 1 !important;
+    }
+
+
+
+    /* =========================================================
+       IMAGE DIALOG CLOSE â€” DEFINITIVE SINGLE X
+       Empty button; one CSS pseudo-element only.
+       ========================================================= */
+    .project-dialog .dialog-close {
+      font-size: 0 !important;
+      text-indent: -9999px !important;
+      overflow: hidden !important;
+    }
+
+    .project-dialog .dialog-close > * {
+      display: none !important;
+    }
+
+    .project-dialog .dialog-close::after {
+      content: none !important;
+      display: none !important;
+    }
+
+    .project-dialog .dialog-close::before {
+      content: "X" !important;
+      position: absolute !important;
+      inset: 0 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 100% !important;
+      height: 100% !important;
+      color: #fff4e3 !important;
+      font-family: Arial, Helvetica, sans-serif !important;
+      font-size: 24px !important;
+      font-weight: 400 !important;
+      line-height: 1 !important;
+      text-indent: 0 !important;
+      pointer-events: none !important;
+    }
+
+
+
+
+    /* =========================================================
+       BOOKING REALM CARD â€” CLEAN RECTANGULAR VERSION
+       No pseudo-elements are used, so no circular overlay can appear.
+       ========================================================= */
+    #realm-grid .booking-realm-card {
+      position: relative !important;
+      border-radius: 0 !important;
+      overflow: hidden !important;
+      isolation: isolate !important;
+      border-color: rgba(213, 155, 86, .92) !important;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 239, 207, .15),
+        0 0 36px rgba(145, 43, 18, .28),
+        0 22px 48px rgba(0, 0, 0, .58) !important;
+    }
+
+    #realm-grid .booking-realm-card::before,
+    #realm-grid .booking-realm-card::after {
+      content: none !important;
+      display: none !important;
+      width: 0 !important;
+      height: 0 !important;
+      border: 0 !important;
+      background: none !important;
+      box-shadow: none !important;
+      opacity: 0 !important;
+    }
+
+    #realm-grid .booking-realm-card img {
+      border-radius: 0 !important;
+      clip-path: none !important;
+      mask: none !important;
+      -webkit-mask: none !important;
+    }
+
+    #realm-grid .booking-realm-card .booking-badge {
+      position: absolute !important;
+      top: 14px !important;
+      right: 14px !important;
+      z-index: 20 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: auto !important;
+      height: auto !important;
+      padding: 7px 11px !important;
+      border: 1px solid rgba(231, 182, 112, .86) !important;
+      border-radius: 999px !important;
+      color: #fff2dc !important;
+      background: rgba(82, 23, 11, .90) !important;
+      font-family: "Oxanium", sans-serif !important;
+      font-size: 9px !important;
+      font-weight: 600 !important;
+      letter-spacing: .15em !important;
+      line-height: 1 !important;
+      white-space: nowrap !important;
+      pointer-events: none !important;
+    }
+
+    #realm-grid .booking-realm-card:hover,
+    #realm-grid .booking-realm-card:focus-visible {
+      transform: translateY(-5px) scale(1.015) !important;
+      border-color: #efbb75 !important;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 244, 218, .20),
+        0 0 48px rgba(177, 57, 22, .38),
+        0 28px 60px rgba(0, 0, 0, .68) !important;
+    }
+
+
+
+    /* =========================================================
+       REALM IMAGE CENTERING + FULLSCREEN PREVIOUS/NEXT CONTROLS
+       ========================================================= */
+    #realm-grid .realm-card,
+    #realm-grid .realm-card-graphic {
+      overflow: hidden !important;
+    }
+
+    #realm-grid .realm-card img,
+    #realm-grid .realm-card-image,
+    #realm-grid .booking-realm-card img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      object-position: 50% 50% !important;
+      transform-origin: center center !important;
+    }
+
+    .project-dialog .dialog-visual {
+      position: relative !important;
+    }
+
+    .project-dialog .dialog-nav {
+      position: absolute !important;
+      top: 50% !important;
+      z-index: 90 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 54px !important;
+      height: 72px !important;
+      padding: 0 !important;
+      border: 1px solid rgba(211, 158, 88, .82) !important;
+      border-radius: 14px !important;
+      background: rgba(5, 5, 5, .82) !important;
+      color: #fff2dc !important;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 239, 207, .10),
+        0 12px 30px rgba(0, 0, 0, .48) !important;
+      transform: translateY(-50%) !important;
+      cursor: pointer !important;
+      transition:
+        transform .2s ease,
+        border-color .2s ease,
+        background .2s ease,
+        box-shadow .2s ease !important;
+    }
+
+    .project-dialog .dialog-prev {
+      left: 18px !important;
+    }
+
+    .project-dialog .dialog-next {
+      right: 18px !important;
+    }
+
+    .project-dialog .dialog-nav span {
+      display: block !important;
+      font-family: Arial, Helvetica, sans-serif !important;
+      font-size: 44px !important;
+      font-weight: 300 !important;
+      line-height: .8 !important;
+      transform: translateY(-2px) !important;
+      pointer-events: none !important;
+    }
+
+    .project-dialog .dialog-nav:hover,
+    .project-dialog .dialog-nav:focus-visible {
+      border-color: #efbd78 !important;
+      background: rgba(77, 28, 13, .94) !important;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 244, 218, .16),
+        0 0 26px rgba(167, 54, 22, .30),
+        0 16px 36px rgba(0, 0, 0, .56) !important;
+      outline: none !important;
+    }
+
+    .project-dialog .dialog-prev:hover,
+    .project-dialog .dialog-prev:focus-visible {
+      transform: translateY(-50%) translateX(-2px) !important;
+    }
+
+    .project-dialog .dialog-next:hover,
+    .project-dialog .dialog-next:focus-visible {
+      transform: translateY(-50%) translateX(2px) !important;
+    }
+
+    @media (max-width: 760px) {
+      .project-dialog .dialog-nav {
+        width: 44px !important;
+        height: 60px !important;
+        border-radius: 12px !important;
+      }
+
+      .project-dialog .dialog-prev {
+        left: 8px !important;
+      }
+
+      .project-dialog .dialog-next {
+        right: 8px !important;
+      }
+
+      .project-dialog .dialog-nav span {
+        font-size: 36px !important;
+      }
+    }
+
+
+
+    /* =========================================================
+       EXPLORE THE REALMS â€” FORCE ALL IMAGES TO TRUE CENTER
+       ========================================================= */
+    #realm-grid .realm-card,
+    #realm-grid .realm-card-graphic {
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    #realm-grid .realm-card > img,
+    #realm-grid .realm-card-graphic > img,
+    #realm-grid img.realm-card-image,
+    #realm-grid .realm-card img,
+    #realm-grid .realm-card-graphic img {
+      position: absolute !important;
+      inset: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      max-width: none !important;
+      max-height: none !important;
+      margin: 0 !important;
+      object-fit: cover !important;
+      object-position: center center !important;
+      transform: none !important;
+      transform-origin: center center !important;
+    }
+
+    #realm-grid .realm-card-copy,
+    #realm-grid .realm-card-shade,
+    #realm-grid [class*="copy"],
+    #realm-grid [class*="shade"] {
+      position: relative !important;
+      z-index: 2 !important;
+    }
+
+
+
+    /* =========================================================
+       EXPLORE THE REALMS â€” CENTER THE CARDS WITHIN THE PANEL
+       ========================================================= */
+    #realm-grid.realm-grid {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      align-items: stretch !important;
+      justify-content: center !important;
+      gap: clamp(12px, 1.2vw, 20px) !important;
+      width: 100% !important;
+    }
+
+    #realm-grid.realm-grid > * {
+      flex: 0 1 calc((100% - 40px) / 3) !important;
+      width: calc((100% - 40px) / 3) !important;
+      min-width: 260px !important;
+      max-width: 420px !important;
+      margin: 0 !important;
+    }
+
+    @media (max-width: 1180px) {
+      #realm-grid.realm-grid > * {
+        flex-basis: calc((100% - 40px) / 3) !important;
+        width: calc((100% - 40px) / 3) !important;
+      }
+    }
+
+    @media (max-width: 860px) {
+      #realm-grid.realm-grid > * {
+        flex-basis: calc((100% - 20px) / 2) !important;
+        width: calc((100% - 20px) / 2) !important;
+        max-width: none !important;
+      }
+    }
+
+    @media (max-width: 560px) {
+      #realm-grid.realm-grid > * {
+        flex-basis: 100% !important;
+        width: 100% !important;
+        min-width: 0 !important;
+      }
+    }
+
+
+
+    /* =========================================================
+       GUARANTEED TATTOO CONTACT FORM
+       ========================================================= */
+    .tattoo-contact-form-shell {
+      margin-top: 42px !important;
+      padding: clamp(24px, 4vw, 46px) !important;
+      border: 1px solid rgba(205, 148, 80, .72) !important;
+      background: linear-gradient(180deg, rgba(38, 20, 13, .95), rgba(8, 8, 8, .98)) !important;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 238, 206, .08),
+        0 24px 58px rgba(0, 0, 0, .54) !important;
+    }
+
+    .tattoo-contact-form-shell h3 {
+      margin: 0 0 10px !important;
+      color: #fff1dc !important;
+      font-family: "Cinzel", Georgia, serif !important;
+      font-size: clamp(30px, 4vw, 50px) !important;
+      line-height: 1.08 !important;
+    }
+
+    .tattoo-contact-form-shell > p {
+      margin: 0 0 28px !important;
+      color: rgba(236, 220, 198, .76) !important;
+      line-height: 1.65 !important;
+    }
+
+    .tattoo-contact-form {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 18px !important;
+    }
+
+    .tattoo-contact-form label {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 8px !important;
+      color: #e6c592 !important;
+      font-family: "Oxanium", sans-serif !important;
+      font-size: 11px !important;
+      font-weight: 600 !important;
+      letter-spacing: .12em !important;
+      text-transform: uppercase !important;
+    }
+
+    .tattoo-contact-form .wide {
+      grid-column: 1 / -1 !important;
+    }
+
+    .tattoo-contact-form input,
+    .tattoo-contact-form select,
+    .tattoo-contact-form textarea {
+      width: 100% !important;
+      min-height: 50px !important;
+      padding: 13px 15px !important;
+      border: 1px solid rgba(177, 128, 71, .58) !important;
+      border-radius: 10px !important;
+      background: rgba(4, 5, 5, .82) !important;
+      color: #fff4e5 !important;
+      font: inherit !important;
+      outline: none !important;
+    }
+
+    .tattoo-contact-form textarea {
+      min-height: 130px !important;
+      resize: vertical !important;
+    }
+
+    .tattoo-contact-form input:focus,
+    .tattoo-contact-form select:focus,
+    .tattoo-contact-form textarea:focus {
+      border-color: #e1aa67 !important;
+      box-shadow: 0 0 0 3px rgba(184, 76, 30, .16) !important;
+    }
+
+    .tattoo-contact-form .consent {
+      grid-column: 1 / -1 !important;
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: flex-start !important;
+      gap: 11px !important;
+      color: rgba(238, 221, 199, .75) !important;
+      font-family: inherit !important;
+      font-size: 13px !important;
+      font-weight: 400 !important;
+      letter-spacing: 0 !important;
+      line-height: 1.5 !important;
+      text-transform: none !important;
+    }
+
+    .tattoo-contact-form .consent input {
+      width: 18px !important;
+      height: 18px !important;
+      min-height: 18px !important;
+      flex: 0 0 auto !important;
+      margin-top: 2px !important;
+    }
+
+    .tattoo-contact-form button {
+      grid-column: 1 / -1 !important;
+      width: 100% !important;
+      justify-content: center !important;
+      border: 1px solid rgba(231, 176, 105, .94) !important;
+      cursor: pointer !important;
+    }
+
+    .tattoo-contact-form .honeypot {
+      position: absolute !important;
+      left: -9999px !important;
+      width: 1px !important;
+      height: 1px !important;
+      opacity: 0 !important;
+    }
+
+    @media (max-width: 700px) {
+      .tattoo-contact-form {
+        grid-template-columns: 1fr !important;
+      }
+
+      .tattoo-contact-form .wide,
+      .tattoo-contact-form .consent,
+      .tattoo-contact-form button {
+        grid-column: 1 !important;
+      }
+    }
+
+
+
+    .tattoo-contact-form .attachment-note {
+      color: rgba(227, 211, 189, .56) !important;
+      font-family: "Oxanium", sans-serif !important;
+      font-size: 10px !important;
+      font-weight: 400 !important;
+      letter-spacing: .04em !important;
+      line-height: 1.5 !important;
+      text-transform: none !important;
+    }
+
+
+    /* =========================================================
+       FIXED HEADER + SAME-PAGE ANCHOR OFFSET
+       ========================================================= */
+    .site-header {
+      position: fixed !important;
+      top: 0 !important;
+      right: 0 !important;
+      bottom: auto !important;
+      left: 0 !important;
+      z-index: 10000 !important;
+    }
+
+    .mobile-panel {
+      position: fixed !important;
+      z-index: 9999 !important;
+    }
+
+    html {
+      scroll-padding-top: 100px;
+    }
+
+    @media (max-width: 1100px) {
+      html {
+        scroll-padding-top: 92px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      html {
+        scroll-padding-top: 86px;
+      }
+    }
+
+
+    /* Sister-site links â€” final isolated layout fix */
+    .site-header .sister-site-actions {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-end !important;
+      gap: 12px !important;
+      min-width: 0 !important;
+      width: auto !important;
+      overflow: visible !important;
+    }
+
+    .site-header .sister-site-actions > .header-cta {
+      position: relative !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex: 0 0 auto !important;
+      width: auto !important;
+      min-width: 168px !important;
+      max-width: none !important;
+      height: 46px !important;
+      min-height: 46px !important;
+      padding: 0 20px !important;
+      margin: 0 !important;
+      border-radius: 14px !important;
+      overflow: hidden !important;
+      white-space: nowrap !important;
+      text-align: center !important;
+      line-height: 1 !important;
+      font-family: "Cinzel", Georgia, serif !important;
+      font-size: 10px !important;
+      font-weight: 600 !important;
+      letter-spacing: .08em !important;
+      text-decoration: none !important;
+    }
+
+    @media (max-width: 1240px) and (min-width: 981px) {
+      .site-header .sister-site-actions { gap: 8px !important; }
+      .site-header .sister-site-actions > .header-cta {
+        min-width: 146px !important;
+        padding: 0 13px !important;
+        font-size: 9px !important;
+        letter-spacing: .05em !important;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .site-header .sister-site-actions { display: none !important; }
+    }
+
+
+    /* =========================================================
+       PAULBOOTHART.COM â€” CRIMSON SATIN LOGO + SUBTLE ANIMATION
+       Uses the supplied transparent logo without a circular frame.
+       ========================================================= */
+    #hero-animation .hero-logo-stage--sigil,
+    #hero-animation .hero-medallion {
+      overflow: visible !important;
+      background: transparent !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      clip-path: none !important;
+      -webkit-clip-path: none !important;
+      mask: none !important;
+      -webkit-mask: none !important;
+    }
+
+    #hero-animation .hero-medallion-depth,
+    #hero-animation .hero-medallion-rim,
+    #hero-animation .hero-medallion-glass {
+      display: none !important;
+    }
+
+    #hero-animation .hero-medallion-face {
+      display: block !important;
+      width: 100% !important;
+      height: 100% !important;
+      max-width: none !important;
+      max-height: none !important;
+      object-fit: contain !important;
+      object-position: center center !important;
+      background: transparent !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      transform-origin: 50% 52% !important;
+      filter:
+        brightness(1.03)
+        contrast(1.08)
+        saturate(1.08)
+        drop-shadow(0 0 10px rgba(255, 48, 30, .26))
+        drop-shadow(0 0 30px rgba(126, 0, 0, .34)) !important;
+      animation: pbArtCrimsonLogoBreath 7.5s ease-in-out infinite !important;
+      will-change: transform, filter;
+    }
+
+    #hero-animation .hero-red-flicker {
+      opacity: .42 !important;
+      animation: pbArtCrimsonAura 5.6s ease-in-out infinite !important;
+    }
+
+    @keyframes pbArtCrimsonLogoBreath {
+      0%, 100% {
+        transform: translate3d(0, 0, 0) scale(1);
+        filter:
+          brightness(1.00)
+          contrast(1.08)
+          saturate(1.05)
+          drop-shadow(0 0 8px rgba(255, 48, 30, .22))
+          drop-shadow(0 0 25px rgba(126, 0, 0, .30));
+      }
+      50% {
+        transform: translate3d(0, -7px, 0) scale(1.018);
+        filter:
+          brightness(1.10)
+          contrast(1.12)
+          saturate(1.15)
+          drop-shadow(0 0 15px rgba(255, 66, 40, .38))
+          drop-shadow(0 0 42px rgba(150, 0, 0, .46));
+      }
+    }
+
+    @keyframes pbArtCrimsonAura {
+      0%, 100% { opacity: .28; transform: scale(.97); }
+      50% { opacity: .55; transform: scale(1.04); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #hero-animation .hero-medallion-face,
+      #hero-animation .hero-red-flicker,
+      #hero-animation .hero-logo-orbit,
+      #hero-animation .hero-orbital-nodes,
+      #hero-animation .hero-logo-sweep {
+        animation: none !important;
+        transform: none !important;
+      }
+    }
+
+  </style>
+
+
+  <style id="fine-art-category-buttons-prominent">
+    /* =========================================================
+       FINE ARTS CATEGORY BUTTONS â€” LARGER + MORE PROMINENT
+       ========================================================= */
+    #fine-art .filter-bar {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 14px !important;
+      margin: 30px auto 34px !important;
+      padding: 18px !important;
+      border: 1px solid rgba(178, 126, 67, .38) !important;
+      background: linear-gradient(180deg, rgba(28, 17, 12, .74), rgba(5, 6, 6, .80)) !important;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 239, 207, .06),
+        0 16px 38px rgba(0, 0, 0, .34) !important;
+    }
+
+    #fine-art .filter-bar .filter {
+      position: relative !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      min-width: 154px !important;
+      min-height: 54px !important;
+      padding: 14px 22px !important;
+      border: 1px solid rgba(202, 151, 86, .72) !important;
+      border-radius: 12px !important;
+      background: linear-gradient(180deg, rgba(50, 32, 20, .94), rgba(9, 9, 9, .98)) !important;
+      color: rgba(247, 229, 203, .90) !important;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 240, 213, .08),
+        0 8px 22px rgba(0, 0, 0, .34) !important;
+      font-family: "Cinzel Decorative", "Cormorant Garamond", Georgia, serif !important;
+      font-size: 13px !important;
+      font-weight: 700 !important;
+      letter-spacing: .075em !important;
+      line-height: 1.15 !important;
+      text-align: center !important;
+      text-transform: uppercase !important;
+      cursor: pointer !important;
+      transition:
+        transform .22s ease,
+        border-color .22s ease,
+        background .22s ease,
+        color .22s ease,
+        box-shadow .22s ease !important;
+    }
+
+    #fine-art .filter-bar .filter:hover,
+    #fine-art .filter-bar .filter:focus-visible {
+      color: #fff6e8 !important;
+      border-color: #efb96f !important;
+      background: linear-gradient(180deg, rgba(85, 43, 21, .98), rgba(16, 10, 8, .99)) !important;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 243, 219, .14),
+        0 0 24px rgba(173, 70, 29, .22),
+        0 12px 30px rgba(0, 0, 0, .46) !important;
+      transform: translateY(-2px) !important;
+      outline: none !important;
+    }
+
+    #fine-art .filter-bar .filter.active {
+      color: #fff9ee !important;
+      border-color: #f2bd76 !important;
+      background:
+        linear-gradient(180deg, rgba(111, 47, 20, .98), rgba(33, 13, 9, .99)) !important;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 244, 220, .18),
+        inset 0 0 22px rgba(185, 69, 25, .15),
+        0 0 28px rgba(170, 57, 20, .28),
+        0 12px 34px rgba(0, 0, 0, .46) !important;
+      transform: translateY(-1px) !important;
+    }
+
+    @media (max-width: 760px) {
+      #fine-art .filter-bar {
+        gap: 10px !important;
+        padding: 14px !important;
+      }
+
+      #fine-art .filter-bar .filter {
+        flex: 1 1 calc(50% - 10px) !important;
+        min-width: 0 !important;
+        min-height: 50px !important;
+        padding: 12px 14px !important;
+        font-size: 11px !important;
+        letter-spacing: .055em !important;
+      }
+    }
+
+    @media (max-width: 460px) {
+      #fine-art .filter-bar .filter {
+        flex-basis: 100% !important;
+      }
+    }
+  </style>
+
+  <link rel="icon" href="/favicon.ico?v=20260807c" sizes="any" />
+  <link rel="icon" type="image/png" href="/favicon.png?v=20260807c" />
+  <link rel="shortcut icon" href="/favicon.ico?v=20260807c" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20260807c" />
+</head>
+<body>
+  <div class="fixed-site-background" aria-hidden="true"></div>
+  <div class="fixed-site-shade" aria-hidden="true"></div>
+  <div class="page-noise" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="mini-brand" href="#top" aria-label="PaulBoothArt.com home">
+      <span class="mini-brand-mark">PB</span>
+      <span>PAULBOOTHART.COM</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#fine-art">Fine Arts</a>
+      <a href="#tattoo-art">Tattoo Art</a>
+      <a href="#video-art">Video Art</a>
+      <a href="#objects">Objects</a>
+      <a href="#about">About</a>
+      <a href="#appointment">Appointments</a>
+      <a href="https://paulbooth.ai/">PaulBooth.ai</a>
+      <a href="https://paulboothbrand.com/">PaulBoothBrand.com</a>
+    </nav>
+    <button class="menu-button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </header>
+
+  <div class="mobile-panel" aria-hidden="true">
+    <a href="#fine-art">Fine Arts</a><a href="#tattoo-art">Tattoo Art</a><a href="#video-art">Video Art</a><a href="#objects">3D & Jewelry</a><a href="#about">About Paul Booth</a><a href="#appointment">Tattoo Appointments</a><a href="https://paulbooth.ai/">Open PaulBooth.ai &#8594;</a><a href="https://paulboothbrand.com/">Open PaulBoothBrand.com &#8594;</a>
+  </div>
+
+  <main>
+    <section class="hero section-shell" id="hero-animation">
+      <div class="hero-vignette" aria-hidden="true"></div><canvas class="hero-particles" aria-hidden="true"></canvas><canvas class="hero-static" aria-hidden="true"></canvas><div class="hero-scanlines" aria-hidden="true"></div>
+      <div class="hero-logo-stage hero-logo-stage--sigil" aria-label="Paul Booth Art">
+        <div class="hero-red-flicker" aria-hidden="true"></div>
+        <div class="hero-logo-orbit hero-logo-orbit--far" aria-hidden="true"></div>
+        <div class="hero-logo-orbit hero-logo-orbit--outer" aria-hidden="true"></div>
+        <div class="hero-logo-orbit hero-logo-orbit--mid" aria-hidden="true"></div>
+        <div class="hero-logo-orbit hero-logo-orbit--inner" aria-hidden="true"></div>
+        <div class="hero-orbital-nodes hero-orbital-nodes--one" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <div class="hero-orbital-nodes hero-orbital-nodes--two" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="hero-orbital-nodes hero-orbital-nodes--three" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="hero-logo-aura" aria-hidden="true"></div>
+        <div class="hero-logo-plinth" aria-hidden="true"></div>
+        <div class="hero-medallion" aria-label="Paul Booth Art crimson emblem">
+          <div class="hero-medallion-depth" aria-hidden="true"></div>
+          <div class="hero-medallion-rim" aria-hidden="true"></div>
+          <img class="hero-medallion-face" src="assets/hero-logo-requested-exact.png" alt="Paul Booth Art crimson satin emblem" />
+          <div class="hero-medallion-glass" aria-hidden="true"></div>
+        </div>
+        <div class="hero-logo-sweep" aria-hidden="true"></div>
+      </div>
+      <div class="hero-title"><span>PAUL BOOTH</span><strong>FINE ARTS</strong></div>
+      <div class="hero-content"><p class="hero-manifesto">Dark Surrealism. <span>Tattoo Legacy.</span> Objects of Devotion.</p><a class="primary-button" href="#fine-art">Explore Fine Arts <span>&rarr;</span></a></div>
+      <div class="hero-status" aria-hidden="true"><span>FINE ARTS NODE 01</span><span class="status-line"></span><span>ONLINE</span></div>
+    </section>
+
+    <section class="realms section-shell" aria-labelledby="realms-title"><div class="section-heading reveal"><span class="eyebrow">Navigation Matrix</span><h2 id="realms-title">Explore the Realms</h2></div><div id="realm-grid" class="realm-grid"></div></section>
+
+    <section id="fine-art" class="archive section-shell" aria-labelledby="fine-art-title">
+      <div class="section-heading reveal split-heading"><div><span class="eyebrow">Paintings / Drawings / Mixed Media</span><h2 id="fine-art-title">Fine Arts</h2></div><p id="fine-art-count">112 works and films cataloged</p></div>
+      <p class="collection-intro reveal">Dark surrealist works formed from psychological pressure, ritual symbolism, organic distortion, and the confrontation of the human shadow. Explore the complete collection below.</p>
+      <div class="filter-bar reveal" role="group" aria-label="Fine arts collection categories"><button class="filter active" data-filter="all">All Works</button><button class="filter" data-filter="fine-art">Paintings & Drawings</button><button class="filter" data-filter="tattoo">Tattoo Art</button><button class="filter" data-filter="video">Video Art</button><button class="filter" data-filter="3d">3D Design</button><button class="filter" data-filter="jewelry">Jewelry</button></div>
+      <div id="project-grid" class="project-grid"></div><button id="load-more" class="secondary-button load-more" type="button">Load more works <span>+</span></button>
+    </section>
+
+
+    <section id="tattoo-art" class="motion section-shell"><div class="section-heading reveal"><span class="eyebrow">Skin / Ritual / Transformation</span><h2>Tattoo Art</h2></div><div class="motion-stage reveal"><button class="motion-screen tattoo-feature" data-open-id="tattoo-001" aria-label="Open featured tattoo"><img src="content/images/IMG_9975.jpg" alt="Featured Paul Booth tattoo" /><div class="screen-core"></div><span class="motion-project-play">+</span><span class="screen-label">FEATURED TATTOO WORK</span></button><div class="motion-copy"><p class="counter">01 / LEGACY</p><span class="eyebrow">Freehand / Black & Grey / Large Scale</span><h3>A Living Canvas</h3><p>Paul Booth's tattoo work merges anatomy, biomechanical form, psychological darkness, and the individual shape of the body into singular, site-specific compositions.</p><button class="text-link filter-jump" data-jump="tattoo">View tattoo works <span>&rarr;</span></button></div></div></section>
+
+    <section id="video-art" class="video-art section-shell" aria-labelledby="video-title">
+      <div class="section-heading reveal split-heading"><div><span class="eyebrow">Film / Motion / Moving Image</span><h2 id="video-title">Video Art</h2></div><p>The Video Art section presents seven selected YouTube works in the same cinematic visual system as the Fine Arts collection.</p></div>
+      <div id="video-grid" class="video-grid"></div>
+    </section>
+
+    <section id="objects" class="machines section-shell"><div class="section-heading reveal split-heading"><div><span class="eyebrow">Sculpture / Wearable Objects</span><h2>Objects & Artifacts</h2></div><p>Three-dimensional forms, jewelry, sculptural objects, and Ritean artifacts extending the visual language beyond canvas and skin.</p></div><div id="object-grid" class="machine-grid"></div></section>
+
+    <section id="about" class="about section-shell reveal">
+      <div class="about-photo-frame">
+        <img src="content/images/PB_headshot01.jpg" alt="Paul Booth portrait" />
+        <span class="photo-index">PB / 001</span>
+      </div>
+      <div class="about-copy">
+        <span class="eyebrow">About Paul Booth</span>
+        <h2>Artist. Tattooist. Sculptor. Filmmaker.</h2>
+        <p class="lead">For nearly four decades, Paul Booth has built a singular body of work at the intersection of dark surrealism, psychological symbolism, Gothic aesthetics, and uncompromising craftsmanship.</p>
+        <p>His imagery is immediately recognizable, yet it has never been confined to a single medium. Booth approaches art as a complete language&mdash;one capable of moving from skin to canvas, from sculpture to film, from sound to physical space without losing its identity.</p>
+        <details>
+          <summary>Read the full biography</summary>
+          <p>Best known internationally for his transformative influence on contemporary tattooing, Booth helped push the medium far beyond conventional decoration. His highly detailed black-and-gray work brought the atmosphere, depth, composition, and emotional intensity of fine art to the human body. Distorted anatomy, biomechanical forms, ritual symbolism, decaying figures, and psychologically charged imagery became part of a visual vocabulary that would influence generations of tattoo artists around the world.</p>
+          <p>But tattooing has always been only one part of a much larger practice. Booth works fluidly across <strong>painting, drawing, tattooing, sculpture, filmmaking, photography, music, design, digital media, and immersive installation</strong>. Rather than treating these disciplines as separate careers, he uses each medium as another instrument for exploring the same evolving artistic universe. A form that begins as a drawing may become a tattoo, a sculptural object, a cinematic image, an environment, or a piece of moving digital art. The medium changes; the underlying language remains unmistakably his own.</p>
+          <p>Across this work, Booth repeatedly returns to the darker territories of human experience: mortality, fear, transformation, identity, ritual, isolation, consciousness, and the unconscious. Darkness is not used simply for shock or spectacle. It becomes a means of investigation&mdash;a way of confronting the psychological forces that exist beneath the surface of everyday life. His figures often appear suspended between states: human and monstrous, biological and mechanical, sacred and profane, living and decaying. The grotesque becomes a mirror rather than an endpoint.</p>
+          <p>That philosophy extended beyond individual artworks into the environments Booth created around them. His <strong>Last Rites Tattoo Theatre &amp; Gallery</strong> in New York became a physical manifestation of his artistic world&mdash;a place where tattooing, painting, sculpture, music, performance, architecture, and atmosphere could coexist. More than a studio or gallery, it demonstrated Booth&rsquo;s ability to think not only in terms of individual objects, but in complete experiences.</p>
+          <p>Sculpture allowed that world to become tangible. Film introduced movement, time, sound, and narrative. Music added another emotional dimension. Painting and drawing offered unrestricted spaces for anatomy, texture, symbolism, and psychological abstraction. Throughout each discipline, Booth has maintained the same underlying commitment: to create work that feels discovered rather than manufactured&mdash;as though the image, object, or environment has been unearthed from some deeper internal mythology.</p>
+          <p>His career has therefore been defined as much by <strong>versatility as consistency</strong>. Few artists move comfortably between so many forms while maintaining such a distinct visual identity. Whether working with a tattoo machine, paint, clay, a camera, sound, physical materials, or emerging digital tools, Booth treats technique as secondary to vision. The medium serves the idea, not the other way around.</p>
+          <p>Today, his practice continues to evolve across both physical and digital forms, extending decades of traditional craftsmanship into new technologies and experimental methods of image-making. What remains constant is the desire to make the invisible visible&mdash;to give physical form to fear, memory, transformation, imagination, and the hidden architecture of the psyche.</p>
+          <p><strong>Paul Booth&rsquo;s work is not defined by a single medium. It is the construction of an interconnected world&mdash;built across skin, canvas, objects, sound, moving image, and space.</strong></p>
+        </details>
+      </div>
+      <div class="about-reliquary" aria-hidden="true">
+        <div class="reliquary-figure"></div>
+      </div>
+    </section>
+
+
+    <section id="appointment" class="appointment appointment-featured section-shell"><div class="section-heading reveal split-heading"><div><span class="eyebrow">Tattoo Appointment Protocol</span><h2>Book a Tattoo</h2></div><p>Paul currently works in New Jersey, approximately 35 minutes west of midtown Manhattan.</p></div><div class="appointment-grid"><article class="protocol-card reveal"><span>01</span><h3>Send the Concept</h3><p>Email your idea or theme, a photo of the area to be tattooed, and any budgetary information.</p></article><article class="protocol-card reveal"><span>02</span><h3>Freehand Interpretation</h3><p>Paul works mainly freehand and develops your ideas through his own visual interpretation.</p></article><article class="protocol-card reveal"><span>03</span><h3>Reserve the Session</h3><p>A $500 deposit holds the appointment and is applied toward the tattoo. Cancellations or rescheduling require 48 hours' notice.</p></article><article class="protocol-card reveal"><span>04</span><h3>Travel & Timing</h3><p>Newark Liberty International Airport (EWR) is the closest airport. Large-scale work can move quickly; a back piece may be completed in 8&ndash;10 hours.</p></article></div><a class="primary-button appointment-cta" href="mailto:lastritestattoo@gmail.com?subject=Tattoo%20Appointment%20Inquiry">Start an appointment inquiry <span>&rarr;</span></a></section>
+
+    <section id="contact" class="signal section-shell reveal"><div><span class="eyebrow">Contact Channel</span><h2>Enter the Conversation</h2><p>Original artwork, exhibitions, tattoo projects, licensing, press, and collaborations.</p></div><div class="signal-actions"><a href="mailto:lastritestattoo@gmail.com" class="secondary-button">Email Last Rites <span>&rarr;</span></a><a href="https://www.instagram.com/paulbooth.ai/" target="_blank" rel="noopener noreferrer" class="secondary-button">Instagram <span>&#8599;</span></a><a href="https://www.youtube.com/@paulboothart" target="_blank" rel="noopener noreferrer" class="secondary-button">YouTube <span>&#8599;</span></a></div></section>
+  </main>
+
+  <footer class="site-footer section-shell"><div class="footer-brand"><span class="mini-brand-mark">PB</span><div><strong>PAULBOOTHART.COM</strong><p>Fine art. Tattoo legacy. Dark surrealism.</p></div></div><div class="footer-links"><div><span>Collections</span><a href="#fine-art">Fine Arts</a><a href="#tattoo-art">Tattoo Art</a><a href="#video-art">Video Art</a><a href="#objects">Objects</a></div><div><span>Information</span><a href="#about">About</a><a href="#appointment">Appointments</a><a href="#contact">Contact</a></div><div><span>Sister Site</span><a href="https://paulbooth.ai/">PaulBooth.ai</a></div></div><div class="footer-bottom"><span>&copy; <span id="year"></span> Paul Booth. All rights reserved.</span><span>PaulBoothArt.com</span></div></footer>
+
+  <dialog class="project-dialog" id="project-dialog">
+    <button class="dialog-close" type="button" aria-label="Close artwork"></button>
+    <div class="dialog-visual">
+      <button class="dialog-nav dialog-prev" type="button" aria-label="Previous artwork"><span aria-hidden="true">&#8249;</span></button>
+      <button class="dialog-nav dialog-next" type="button" aria-label="Next artwork"><span aria-hidden="true">&#8250;</span></button>
+      <img class="dialog-image" alt="" />
+      <video class="dialog-video" controls playsinline preload="metadata"></video>
+      <iframe class="dialog-youtube" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="dialog-youtube-fallback" hidden>
+        <img class="youtube-fallback-poster" alt="" />
+        <div class="youtube-fallback-copy">
+          <span class="eyebrow">LOCAL PREVIEW MODE</span>
+          <h3>YouTube playback needs a web address</h3>
+          <p>Run <strong>START-PREVIEW.bat</strong> and open the site at <strong>http://localhost:8080</strong>, or watch this work directly on YouTube.</p>
+          <a class="primary-button youtube-fallback-link" target="_blank" rel="noopener noreferrer">Watch on YouTube <span>&#8599;</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="dialog-copy">
+      <div class="dialog-details"><span class="eyebrow dialog-type"></span><h2 class="dialog-title"></h2><p class="dialog-description"></p></div>
+      <div class="dialog-actions"><button class="secondary-button dialog-zoom" type="button">View actual size</button><a class="secondary-button dialog-email" href="mailto:lastritestattoo@gmail.com">Inquire <span>&rarr;</span></a></div>
+    </div>
+  </dialog>
+  <script src="content.js?v=video-advance-fix-20260804"></script><script src="script.js?v=video-advance-fix-20260804"></script><script src="image-protection.js?v=20260802"></script>
+<script>
+    (() => {
+      const installTattooContactForm = () => {
+        const appointment = document.getElementById("appointment");
+        if (!appointment || appointment.querySelector(".tattoo-contact-form-shell")) return;
+
+        const oldMailto = appointment.querySelector('a[href^="mailto:"]');
+        if (oldMailto) oldMailto.remove();
+
+        const shell = document.createElement("div");
+        shell.className = "tattoo-contact-form-shell reveal visible";
+        shell.innerHTML = `
+          <span class="eyebrow">Private Project Submission</span>
+          <h3>Start Your Tattoo Inquiry</h3>
+          <p>Send your project details directly through this form. Include the body area, concept, timing, budget, and any reference material that will help evaluate the project.</p>
+
+          <form class="tattoo-contact-form" action="https://formsubmit.co/lastritestattoo@gmail.com" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_subject" value="New PaulBoothArt.com Tattoo Inquiry">
+            <input type="hidden" name="_template" value="box">
+            <input type="hidden" name="_captcha" value="true">
+            <input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off">
+
+            <label>
+              Name *
+              <input type="text" name="Name" autocomplete="name" required>
+            </label>
+
+            <label>
+              Email *
+              <input type="email" name="Email" autocomplete="email" required>
+            </label>
+
+            <label>
+              Phone
+              <input type="tel" name="Phone" autocomplete="tel">
+            </label>
+
+            <label>
+              Preferred contact method
+              <select name="Preferred contact method">
+                <option>Email</option>
+                <option>Phone</option>
+                <option>Text message</option>
+              </select>
+            </label>
+
+            <label>
+              Body area *
+              <input type="text" name="Body area" placeholder="Back, chest, sleeve, leg, etc." required>
+            </label>
+
+            <label>
+              Estimated budget
+              <input type="text" name="Estimated budget" placeholder="Optional">
+            </label>
+
+            <label class="wide">
+              Project concept *
+              <textarea name="Project concept" placeholder="Describe the imagery, theme, scale, and important details." required></textarea>
+            </label>
+
+            <label class="wide">
+              Timing and availability
+              <textarea name="Timing and availability" rows="3" placeholder="Preferred dates, travel plans, or scheduling restrictions."></textarea>
+            </label>
+
+            <label class="wide">
+              Reference image *
+              <input type="file" name="attachment" accept="image/png,image/jpeg,image/jpg,image/webp,.pdf" required>
+              <small class="attachment-note">Maximum total upload size: 10 MB. JPG, PNG, WEBP, or PDF.</small>
+            </label>
+
+            <label class="consent">
+              <input type="checkbox" name="Deposit acknowledgment" value="Acknowledged" required>
+              <span>I understand that approved appointments require a $500 deposit and that submitting this form does not confirm an appointment.</span>
+            </label>
+
+            <button class="primary-button appointment-cta" type="submit">
+              Send tattoo inquiry <span>&rarr;</span>
+            </button>
+          </form>
+        `;
+
+        const appointmentGrid = appointment.querySelector(".appointment-grid");
+        if (appointmentGrid) {
+          appointmentGrid.insertAdjacentElement("afterend", shell);
+        } else {
+          appointment.appendChild(shell);
+        }
+      };
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", installTattooContactForm, { once: true });
+      } else {
+        installTattooContactForm();
+      }
+
+      window.addEventListener("load", installTattooContactForm, { once: true });
+      setTimeout(installTattooContactForm, 500);
+    })();
+  </script>
+
+</body></html>
+
