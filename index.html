@@ -6,7 +6,7 @@
   <meta name="description" content="PaulBoothArt.com &mdash; fine art, tattoo, sculpture, jewelry, video art, and dark surrealism by Paul Booth." />
   <meta name="theme-color" content="#070706" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <meta name="pb-build" content="expanded-bio-20260807" />
+  <meta name="pb-build" content="fine-art-category-buttons-prominent-20260807" />
   <title>PaulBoothArt.com &mdash; Fine Arts</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1043,6 +1043,106 @@
       }
     }
 
+  </style>
+
+
+  <style id="fine-art-category-buttons-prominent">
+    /* =========================================================
+       FINE ARTS CATEGORY BUTTONS — LARGER + MORE PROMINENT
+       ========================================================= */
+    #fine-art .filter-bar {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 14px !important;
+      margin: 30px auto 34px !important;
+      padding: 18px !important;
+      border: 1px solid rgba(178, 126, 67, .38) !important;
+      background: linear-gradient(180deg, rgba(28, 17, 12, .74), rgba(5, 6, 6, .80)) !important;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 239, 207, .06),
+        0 16px 38px rgba(0, 0, 0, .34) !important;
+    }
+
+    #fine-art .filter-bar .filter {
+      position: relative !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      min-width: 154px !important;
+      min-height: 54px !important;
+      padding: 14px 22px !important;
+      border: 1px solid rgba(202, 151, 86, .72) !important;
+      border-radius: 12px !important;
+      background: linear-gradient(180deg, rgba(50, 32, 20, .94), rgba(9, 9, 9, .98)) !important;
+      color: rgba(247, 229, 203, .90) !important;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 240, 213, .08),
+        0 8px 22px rgba(0, 0, 0, .34) !important;
+      font-family: "Cinzel Decorative", "Cormorant Garamond", Georgia, serif !important;
+      font-size: 13px !important;
+      font-weight: 700 !important;
+      letter-spacing: .075em !important;
+      line-height: 1.15 !important;
+      text-align: center !important;
+      text-transform: uppercase !important;
+      cursor: pointer !important;
+      transition:
+        transform .22s ease,
+        border-color .22s ease,
+        background .22s ease,
+        color .22s ease,
+        box-shadow .22s ease !important;
+    }
+
+    #fine-art .filter-bar .filter:hover,
+    #fine-art .filter-bar .filter:focus-visible {
+      color: #fff6e8 !important;
+      border-color: #efb96f !important;
+      background: linear-gradient(180deg, rgba(85, 43, 21, .98), rgba(16, 10, 8, .99)) !important;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 243, 219, .14),
+        0 0 24px rgba(173, 70, 29, .22),
+        0 12px 30px rgba(0, 0, 0, .46) !important;
+      transform: translateY(-2px) !important;
+      outline: none !important;
+    }
+
+    #fine-art .filter-bar .filter.active {
+      color: #fff9ee !important;
+      border-color: #f2bd76 !important;
+      background:
+        linear-gradient(180deg, rgba(111, 47, 20, .98), rgba(33, 13, 9, .99)) !important;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 244, 220, .18),
+        inset 0 0 22px rgba(185, 69, 25, .15),
+        0 0 28px rgba(170, 57, 20, .28),
+        0 12px 34px rgba(0, 0, 0, .46) !important;
+      transform: translateY(-1px) !important;
+    }
+
+    @media (max-width: 760px) {
+      #fine-art .filter-bar {
+        gap: 10px !important;
+        padding: 14px !important;
+      }
+
+      #fine-art .filter-bar .filter {
+        flex: 1 1 calc(50% - 10px) !important;
+        min-width: 0 !important;
+        min-height: 50px !important;
+        padding: 12px 14px !important;
+        font-size: 11px !important;
+        letter-spacing: .055em !important;
+      }
+    }
+
+    @media (max-width: 460px) {
+      #fine-art .filter-bar .filter {
+        flex-basis: 100% !important;
+      }
+    }
   </style>
 
 </head>
