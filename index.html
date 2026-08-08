@@ -6,7 +6,7 @@
   <meta name="description" content="PaulBoothArt.com &mdash; fine art, tattoo, sculpture, jewelry, video art, and dark surrealism by Paul Booth." />
   <meta name="theme-color" content="#070706" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <meta name="pb-build" content="fine-art-category-buttons-prominent-20260807" />
+  <meta name="pb-build" content="hero-hover-pulse-audio-20260808" />
   <title>PaulBoothArt.com &mdash; Fine Arts</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1147,6 +1147,7 @@
   <link rel="icon" href="/favicon.ico?v=20260807c" sizes="any" />
   <link rel="icon" type="image/png" href="/favicon.png?v=20260807c" />
   <link rel="shortcut icon" href="/favicon.ico?v=20260807c" />
+  <link rel="preload" href="assets/audio/pulse01.mp3?v=20260808a" as="audio" type="audio/mpeg" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20260807c" />
 <style id="pb-logo-no-square">#hero-animation .hero-logo-stage--sigil,#hero-animation .hero-medallion,#hero-animation .hero-medallion-face{background:transparent!important;border:0!important;outline:0!important;box-shadow:none!important}#hero-animation .hero-medallion-face{filter:none!important;-webkit-filter:none!important}#hero-animation .hero-medallion:before,#hero-animation .hero-medallion:after,#hero-animation .hero-medallion-depth,#hero-animation .hero-medallion-rim,#hero-animation .hero-medallion-glass,#hero-animation .hero-logo-sweep{display:none!important;opacity:0!important;border:0!important;box-shadow:none!important}</style><style id="pbart-header-logo-fix">.site-header .pbart-header-logo{display:block!important;width:38px!important;height:38px!important;object-fit:contain!important;flex:0 0 38px!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;filter:none!important}@media(max-width:760px){.site-header .pbart-header-logo{width:32px!important;height:32px!important;flex-basis:32px!important}}</style></head>
 <body>
@@ -1380,6 +1381,75 @@
 
       window.addEventListener("load", installTattooContactForm, { once: true });
       setTimeout(installTattooContactForm, 500);
+    })();
+  </script>
+
+  <script id="pbart-hero-hover-audio">
+    (() => {
+      const installHeroHoverAudio = () => {
+        const heroLogo = document.querySelector('#hero-animation .hero-logo-stage--sigil');
+        if (!heroLogo || heroLogo.dataset.hoverAudioReady === 'true') return;
+
+        heroLogo.dataset.hoverAudioReady = 'true';
+
+        const hoverAudio = new Audio('assets/audio/pulse01.mp3?v=20260808a');
+        hoverAudio.preload = 'auto';
+        hoverAudio.volume = 0.88;
+
+        const playPulse = () => {
+          try {
+            hoverAudio.pause();
+            hoverAudio.currentTime = 0;
+            const playPromise = hoverAudio.play();
+            if (playPromise && typeof playPromise.catch === 'function') {
+              playPromise.catch(() => {
+                /* Audible hover audio can be blocked until the browser receives
+                   a click/key interaction. The unlock handler below primes it. */
+              });
+            }
+          } catch (_) {}
+        };
+
+        // Mouse-only behavior: one clean sound each time the cursor enters the
+        // animated hero-logo stage. Moving between elements inside it does not retrigger.
+        heroLogo.addEventListener('mouseenter', playPulse);
+
+        // Prime the audio after the first real user interaction. This keeps the
+        // hover effect reliable in browsers that block audible media before interaction.
+        const unlockAudio = () => {
+          const previousVolume = hoverAudio.volume;
+          hoverAudio.volume = 0;
+          try {
+            const unlockPromise = hoverAudio.play();
+            if (unlockPromise && typeof unlockPromise.then === 'function') {
+              unlockPromise
+                .then(() => {
+                  hoverAudio.pause();
+                  hoverAudio.currentTime = 0;
+                  hoverAudio.volume = previousVolume;
+                })
+                .catch(() => {
+                  hoverAudio.volume = previousVolume;
+                });
+            } else {
+              hoverAudio.pause();
+              hoverAudio.currentTime = 0;
+              hoverAudio.volume = previousVolume;
+            }
+          } catch (_) {
+            hoverAudio.volume = previousVolume;
+          }
+        };
+
+        document.addEventListener('pointerdown', unlockAudio, { once: true, capture: true });
+        document.addEventListener('keydown', unlockAudio, { once: true, capture: true });
+      };
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', installHeroHoverAudio, { once: true });
+      } else {
+        installHeroHoverAudio();
+      }
     })();
   </script>
 
