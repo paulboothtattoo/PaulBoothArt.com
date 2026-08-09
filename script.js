@@ -16,6 +16,7 @@
   };
 
   const realmGrid=qs('#realm-grid');
+  realmGrid.innerHTML='';/* clear pre-rendered markup before rebuilding */
   DATA.realms.forEach((realm,i)=>{
     const a=document.createElement('a');
     a.className='realm-card reveal';
@@ -56,12 +57,14 @@
   }));
 
   const objectGrid=qs('#object-grid');
+  objectGrid.innerHTML='';/* clear pre-rendered markup before rebuilding */
   DATA.works.filter(w=>w.category==='3d'||w.category==='jewelry').forEach(w=>{
     const b=document.createElement('button');b.className='machine-card';b.dataset.id=w.id;
     b.innerHTML=`<img src="${w.image}" alt="${esc(w.alt)}" loading="lazy"><span>${esc(w.title)}</span>`;objectGrid.append(b);
   });
 
   const videoGrid=qs('#video-grid');
+  videoGrid.innerHTML='';/* clear pre-rendered markup before rebuilding */
   DATA.works.filter(isMotion).forEach((w,i)=>{
     const article=document.createElement('article');article.className='video-card reveal';
     const player=w.mediaType==='youtube'
