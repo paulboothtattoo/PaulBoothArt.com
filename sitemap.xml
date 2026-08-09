@@ -1,9 +1,535 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://paulboothart.com/</loc>
     <lastmod>2026-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/AmidstTheChaos_16x20-copy.jpg</image:loc>
+      <image:title>Amidst the Chaos</image:title>
+      <image:caption>Amidst the Chaos by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Behold_A_Pale_Horse-copy.jpg</image:loc>
+      <image:title>Behold a Pale Horse</image:title>
+      <image:caption>Behold a Pale Horse by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Bite-copy.jpg</image:loc>
+      <image:title>Bite</image:title>
+      <image:caption>Bite by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Blind_Luck-copy.jpg</image:loc>
+      <image:title>Blind Luck</image:title>
+      <image:caption>Blind Luck by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Cerebrum-copy.jpg</image:loc>
+      <image:title>Cerebrum</image:title>
+      <image:caption>Cerebrum by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Delusions-copy.jpg</image:loc>
+      <image:title>Delusions</image:title>
+      <image:caption>Delusions by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Disaffected_soul-copy.jpg</image:loc>
+      <image:title>Disaffected Soul</image:title>
+      <image:caption>Disaffected Soul by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Dominus_Muscae_rgb-copy.jpg</image:loc>
+      <image:title>Dominus Muscae</image:title>
+      <image:caption>Dominus Muscae by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Fools_Paradise-copy.jpg</image:loc>
+      <image:title>Fool's Paradise</image:title>
+      <image:caption>Fool's Paradise by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Given_a_Choice-copy.jpg</image:loc>
+      <image:title>Given a Choice</image:title>
+      <image:caption>Given a Choice by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Guitar-2-copy.jpg</image:loc>
+      <image:title>Guitar</image:title>
+      <image:caption>Guitar by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Icarus_Syndrome-copy.jpg</image:loc>
+      <image:title>Icarus Syndrome</image:title>
+      <image:caption>Icarus Syndrome by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/I-ll_Teach_You_To_Smile-copy.jpg</image:loc>
+      <image:title>I'll Teach You to Smile</image:title>
+      <image:caption>I'll Teach You to Smile by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_1708-copy.jpg</image:loc>
+      <image:title>Untitled Study I</image:title>
+      <image:caption>Untitled Study I by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_3292-copy.jpg</image:loc>
+      <image:title>Sculptural Study I</image:title>
+      <image:caption>Sculptural Study I by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_3293-copy.jpg</image:loc>
+      <image:title>Sculptural Study II</image:title>
+      <image:caption>Sculptural Study II by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/InTheNameOfTheFather-copy.jpg</image:loc>
+      <image:title>In the Name of the Father</image:title>
+      <image:caption>In the Name of the Father by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Lamb_of_god-copy.jpg</image:loc>
+      <image:title>Lamb of God</image:title>
+      <image:caption>Lamb of God by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Life_Sentence-copy.jpg</image:loc>
+      <image:title>Life Sentence</image:title>
+      <image:caption>Life Sentence by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Lil_Skeeter-copy.jpg</image:loc>
+      <image:title>Lil' Skeeter</image:title>
+      <image:caption>Lil' Skeeter by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Lost_soul-copy.jpg</image:loc>
+      <image:title>Lost Soul</image:title>
+      <image:caption>Lost Soul by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/LowLife-copy.jpg</image:loc>
+      <image:title>Low Life</image:title>
+      <image:caption>Low Life by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Misanthrope-copy.jpg</image:loc>
+      <image:title>Misanthrope</image:title>
+      <image:caption>Misanthrope by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Mother-copy.jpg</image:loc>
+      <image:title>Mother</image:title>
+      <image:caption>Mother by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Neglect-copy.jpg</image:loc>
+      <image:title>Neglect</image:title>
+      <image:caption>Neglect by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Paranoia-copy.jpg</image:loc>
+      <image:title>Paranoia</image:title>
+      <image:caption>Paranoia by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Parasite-copy.jpg</image:loc>
+      <image:title>Parasite</image:title>
+      <image:caption>Parasite by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/PaulBooth_IllTeachYouToSmile-copy.jpg</image:loc>
+      <image:title>Teach You to Smile — Study</image:title>
+      <image:caption>Teach You to Smile — Study by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/PittedSoul-copy.jpg</image:loc>
+      <image:title>Pitted Soul</image:title>
+      <image:caption>Pitted Soul by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Retribution-copy.jpg</image:loc>
+      <image:title>Retribution</image:title>
+      <image:caption>Retribution by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Skull-copy.jpg</image:loc>
+      <image:title>Skull</image:title>
+      <image:caption>Skull by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/SweetLeaf-copy.jpg</image:loc>
+      <image:title>Sweet Leaf</image:title>
+      <image:caption>Sweet Leaf by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/The-Fibonacci-Worm-copy.jpg</image:loc>
+      <image:title>The Fibonacci Worm</image:title>
+      <image:caption>The Fibonacci Worm by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/The_Fountain_Of_All_Iniquities-copy.jpg</image:loc>
+      <image:title>The Fountain of All Iniquities</image:title>
+      <image:caption>The Fountain of All Iniquities by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/The_Glutton_King-copy.jpg</image:loc>
+      <image:title>The Glutton King</image:title>
+      <image:caption>The Glutton King by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/The_King-copy.jpg</image:loc>
+      <image:title>The King</image:title>
+      <image:caption>The King by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/WereTiki-copy.jpg</image:loc>
+      <image:title>Were-Tiki</image:title>
+      <image:caption>Were-Tiki by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Coexistence-24x36-copy.jpg</image:loc>
+      <image:title>Coexistence</image:title>
+      <image:caption>Coexistence by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Defiance-copy.jpg</image:loc>
+      <image:title>Defiance</image:title>
+      <image:caption>Defiance by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Defiance_Complete-copy.jpg</image:loc>
+      <image:title>Defiance — Complete</image:title>
+      <image:caption>Defiance — Complete by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Device-copy.jpg</image:loc>
+      <image:title>Device</image:title>
+      <image:caption>Device by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_9975.jpg</image:loc>
+      <image:title>Tattoo Archive 01</image:title>
+      <image:caption>Tattoo Archive 01 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_9976.jpg</image:loc>
+      <image:title>Tattoo Archive 02</image:title>
+      <image:caption>Tattoo Archive 02 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_9979.jpg</image:loc>
+      <image:title>Tattoo Archive 03</image:title>
+      <image:caption>Tattoo Archive 03 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_9980.jpg</image:loc>
+      <image:title>Tattoo Archive 04</image:title>
+      <image:caption>Tattoo Archive 04 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_9981.jpg</image:loc>
+      <image:title>Tattoo Archive 05</image:title>
+      <image:caption>Tattoo Archive 05 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_9982.jpg</image:loc>
+      <image:title>Tattoo Archive 06</image:title>
+      <image:caption>Tattoo Archive 06 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_9983.jpg</image:loc>
+      <image:title>Tattoo Archive 07</image:title>
+      <image:caption>Tattoo Archive 07 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_9984.jpg</image:loc>
+      <image:title>Tattoo Archive 08</image:title>
+      <image:caption>Tattoo Archive 08 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_9985.jpg</image:loc>
+      <image:title>Tattoo Archive 09</image:title>
+      <image:caption>Tattoo Archive 09 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_9986.jpg</image:loc>
+      <image:title>Tattoo Archive 10</image:title>
+      <image:caption>Tattoo Archive 10 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_9987.jpg</image:loc>
+      <image:title>Tattoo Archive 11</image:title>
+      <image:caption>Tattoo Archive 11 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_9988.jpg</image:loc>
+      <image:title>Tattoo Archive 12</image:title>
+      <image:caption>Tattoo Archive 12 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_9989.jpg</image:loc>
+      <image:title>Tattoo Archive 13</image:title>
+      <image:caption>Tattoo Archive 13 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_9990.jpg</image:loc>
+      <image:title>Tattoo Archive 14</image:title>
+      <image:caption>Tattoo Archive 14 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/1.jpeg</image:loc>
+      <image:title>Tattoo Archive 15</image:title>
+      <image:caption>Tattoo Archive 15 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/2.jpeg</image:loc>
+      <image:title>Tattoo Archive 16</image:title>
+      <image:caption>Tattoo Archive 16 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/3.jpeg</image:loc>
+      <image:title>Tattoo Archive 17</image:title>
+      <image:caption>Tattoo Archive 17 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/4.jpeg</image:loc>
+      <image:title>Tattoo Archive 18</image:title>
+      <image:caption>Tattoo Archive 18 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/5.jpeg</image:loc>
+      <image:title>Tattoo Archive 19</image:title>
+      <image:caption>Tattoo Archive 19 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/6.jpeg</image:loc>
+      <image:title>Tattoo Archive 20</image:title>
+      <image:caption>Tattoo Archive 20 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/7.jpg</image:loc>
+      <image:title>Tattoo Archive 21</image:title>
+      <image:caption>Tattoo Archive 21 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/8.jpeg</image:loc>
+      <image:title>Tattoo Archive 22</image:title>
+      <image:caption>Tattoo Archive 22 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/9.jpeg</image:loc>
+      <image:title>Tattoo Archive 23</image:title>
+      <image:caption>Tattoo Archive 23 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/10.jpeg</image:loc>
+      <image:title>Tattoo Archive 24</image:title>
+      <image:caption>Tattoo Archive 24 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_1554.jpg</image:loc>
+      <image:title>Tattoo Archive 25</image:title>
+      <image:caption>Tattoo Archive 25 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_1555.jpg</image:loc>
+      <image:title>Tattoo Archive 26</image:title>
+      <image:caption>Tattoo Archive 26 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_1556.jpg</image:loc>
+      <image:title>Tattoo Archive 27</image:title>
+      <image:caption>Tattoo Archive 27 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_1557.jpg</image:loc>
+      <image:title>Tattoo Archive 28</image:title>
+      <image:caption>Tattoo Archive 28 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_1558.jpg</image:loc>
+      <image:title>Tattoo Archive 29</image:title>
+      <image:caption>Tattoo Archive 29 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_4300.jpg</image:loc>
+      <image:title>Tattoo Archive 30</image:title>
+      <image:caption>Tattoo Archive 30 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_4302.jpg</image:loc>
+      <image:title>Tattoo Archive 31</image:title>
+      <image:caption>Tattoo Archive 31 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_5945.jpg</image:loc>
+      <image:title>Tattoo Archive 32</image:title>
+      <image:caption>Tattoo Archive 32 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_5946.jpg</image:loc>
+      <image:title>Tattoo Archive 33</image:title>
+      <image:caption>Tattoo Archive 33 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/xIMG_1555.jpg</image:loc>
+      <image:title>Tattoo Archive 34</image:title>
+      <image:caption>Tattoo Archive 34 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/xIMG_1587.jpg</image:loc>
+      <image:title>Tattoo Archive 35</image:title>
+      <image:caption>Tattoo Archive 35 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/xIMG_1603.jpg</image:loc>
+      <image:title>Tattoo Archive 36</image:title>
+      <image:caption>Tattoo Archive 36 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/xIMG_1622.jpg</image:loc>
+      <image:title>Tattoo Archive 37</image:title>
+      <image:caption>Tattoo Archive 37 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/xIMG_1633.jpg</image:loc>
+      <image:title>Tattoo Archive 38</image:title>
+      <image:caption>Tattoo Archive 38 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/xIMG_1669.jpg</image:loc>
+      <image:title>Tattoo Archive 39</image:title>
+      <image:caption>Tattoo Archive 39 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/xIMG_1694.jpg</image:loc>
+      <image:title>Tattoo Archive 40</image:title>
+      <image:caption>Tattoo Archive 40 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/godiswatching.jpg</image:loc>
+      <image:title>Tattoo Archive 41</image:title>
+      <image:caption>Tattoo Archive 41 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_2295.jpg</image:loc>
+      <image:title>Tattoo Archive 42</image:title>
+      <image:caption>Tattoo Archive 42 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_3540.jpg</image:loc>
+      <image:title>Tattoo Archive 43</image:title>
+      <image:caption>Tattoo Archive 43 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_4576.jpg</image:loc>
+      <image:title>Tattoo Archive 44</image:title>
+      <image:caption>Tattoo Archive 44 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_5310.png</image:loc>
+      <image:title>Tattoo Archive 45</image:title>
+      <image:caption>Tattoo Archive 45 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_5350.jpg</image:loc>
+      <image:title>Tattoo Archive 46</image:title>
+      <image:caption>Tattoo Archive 46 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_5380.jpg</image:loc>
+      <image:title>Tattoo Archive 47</image:title>
+      <image:caption>Tattoo Archive 47 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_5706.jpg</image:loc>
+      <image:title>Tattoo Archive 48</image:title>
+      <image:caption>Tattoo Archive 48 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_5707.jpg</image:loc>
+      <image:title>Tattoo Archive 49</image:title>
+      <image:caption>Tattoo Archive 49 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_5708.jpg</image:loc>
+      <image:title>Tattoo Archive 50</image:title>
+      <image:caption>Tattoo Archive 50 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_5894.jpg</image:loc>
+      <image:title>Tattoo Archive 51</image:title>
+      <image:caption>Tattoo Archive 51 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/morph.jpg</image:loc>
+      <image:title>Tattoo Archive 52</image:title>
+      <image:caption>Tattoo Archive 52 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_9977.jpg</image:loc>
+      <image:title>Tattoo Archive 53</image:title>
+      <image:caption>Tattoo Archive 53 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/IMG_9978.jpg</image:loc>
+      <image:title>Tattoo Archive 54</image:title>
+      <image:caption>Tattoo Archive 54 by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Baby.png</image:loc>
+      <image:title>Ritean Figure</image:title>
+      <image:caption>Ritean Figure by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Belt-Buckle.png</image:loc>
+      <image:title>Serpent Belt Buckle</image:title>
+      <image:caption>Serpent Belt Buckle by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/Glasses.jpg</image:loc>
+      <image:title>Serpent Glasses</image:title>
+      <image:caption>Serpent Glasses by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/NecroHelix-Coffee-Table.jpg</image:loc>
+      <image:title>Necro Helix Coffee Table</image:title>
+      <image:caption>Necro Helix Coffee Table by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/NecroHelixPendant.jpg</image:loc>
+      <image:title>Necro Helix Pendant</image:title>
+      <image:caption>Necro Helix Pendant by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/BabyRattle.jpg</image:loc>
+      <image:title>Baby Rattle</image:title>
+      <image:caption>Baby Rattle by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/CaptiveFetus.jpg</image:loc>
+      <image:title>Captive Fetus</image:title>
+      <image:caption>Captive Fetus by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/RiteanKing.jpg</image:loc>
+      <image:title>Ritean King</image:title>
+      <image:caption>Ritean King by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/RiteanMedallion.jpg</image:loc>
+      <image:title>Ritean Medallion</image:title>
+      <image:caption>Ritean Medallion by Paul Booth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulboothart.com/content/images/RiteanSkull.jpg</image:loc>
+      <image:title>Ritean Skull</image:title>
+      <image:caption>Ritean Skull by Paul Booth</image:caption>
+    </image:image>
   </url>
 </urlset>
