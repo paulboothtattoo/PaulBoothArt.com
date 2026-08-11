@@ -862,12 +862,54 @@
       cursor: pointer !important;
     }
 
-    .tattoo-contact-form .honeypot {
+    /* Honeypot: off-screen rather than display:none, which bots skip. */
+    .tattoo-contact-form .pb-honeypot {
       position: absolute !important;
       left: -9999px !important;
       width: 1px !important;
       height: 1px !important;
+      min-height: 0 !important;
+      padding: 0 !important;
+      border: 0 !important;
       opacity: 0 !important;
+      pointer-events: none !important;
+    }
+
+    .tattoo-contact-form [data-pb-status] {
+      grid-column: 1 / -1 !important;
+      margin: 0 !important;
+      font-family: "Oxanium", sans-serif !important;
+      font-size: 13px !important;
+      line-height: 1.6 !important;
+    }
+
+    .tattoo-contact-form [data-pb-status]:empty {
+      display: none !important;
+    }
+
+    .tattoo-contact-form [data-pb-status="working"] {
+      color: rgba(238, 221, 199, .78) !important;
+    }
+
+    .tattoo-contact-form [data-pb-status="success"] {
+      padding: 14px 16px !important;
+      border: 1px solid rgba(126, 176, 116, .6) !important;
+      border-radius: 10px !important;
+      background: rgba(38, 62, 34, .38) !important;
+      color: #cfe8c6 !important;
+    }
+
+    .tattoo-contact-form [data-pb-status="error"] {
+      padding: 14px 16px !important;
+      border: 1px solid rgba(200, 96, 72, .62) !important;
+      border-radius: 10px !important;
+      background: rgba(74, 26, 20, .42) !important;
+      color: #f2c3b4 !important;
+    }
+
+    .tattoo-contact-form button[disabled] {
+      opacity: .62 !important;
+      cursor: progress !important;
     }
 
     @media (max-width: 700px) {
@@ -1366,7 +1408,7 @@
       <div class="dialog-actions"><button class="secondary-button dialog-zoom" type="button">View actual size</button><a class="secondary-button dialog-email" href="mailto:lastritestattoo@gmail.com">Inquire <span>&rarr;</span></a></div>
     </div>
   </dialog>
-  <script src="content.js?v=video-advance-fix-20260804"></script><script src="script.js?v=video-advance-fix-20260804"></script><script src="image-protection.js?v=20260802"></script>
+  <script src="content.js?v=video-advance-fix-20260804"></script><script src="script.js?v=video-advance-fix-20260804"></script><script src="image-protection.js?v=20260802"></script><script src="contact-form.js?v=20260811"></script>
 <script>
     (() => {
       const installTattooContactForm = () => {
@@ -1383,30 +1425,25 @@
           <h3>Start Your Tattoo Inquiry</h3>
           <p>Send your project details directly through this form. Include the body area, concept, timing, budget, and any reference material that will help evaluate the project.</p>
 
-          <form class="tattoo-contact-form" action="https://formsubmit.co/lastritestattoo@gmail.com" method="POST" enctype="multipart/form-data">
-            <input type="hidden" name="_subject" value="New PaulBoothArt.com Tattoo Inquiry">
-            <input type="hidden" name="_template" value="box">
-            <input type="hidden" name="_captcha" value="true">
-            <input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off">
-
+          <form class="tattoo-contact-form" data-pb-contact data-site="art" novalidate>
             <label>
               Name *
-              <input type="text" name="Name" autocomplete="name" required>
+              <input type="text" name="name" autocomplete="name" required>
             </label>
 
             <label>
               Email *
-              <input type="email" name="Email" autocomplete="email" required>
+              <input type="email" name="email" autocomplete="email" required>
             </label>
 
             <label>
               Phone
-              <input type="tel" name="Phone" autocomplete="tel">
+              <input type="tel" name="phone" autocomplete="tel">
             </label>
 
             <label>
               Preferred contact method
-              <select name="Preferred contact method">
+              <select name="contactMethod">
                 <option>Email</option>
                 <option>Phone</option>
                 <option>Text message</option>
@@ -1415,32 +1452,32 @@
 
             <label>
               Body area *
-              <input type="text" name="Body area" placeholder="Back, chest, sleeve, leg, etc." required>
+              <input type="text" name="bodyArea" placeholder="Back, chest, sleeve, leg, etc." required>
             </label>
 
             <label>
               Estimated budget
-              <input type="text" name="Estimated budget" placeholder="Optional">
+              <input type="text" name="budget" placeholder="Optional">
             </label>
 
             <label class="wide">
               Project concept *
-              <textarea name="Project concept" placeholder="Describe the imagery, theme, scale, and important details." required></textarea>
+              <textarea name="concept" placeholder="Describe the imagery, theme, scale, and important details." required></textarea>
             </label>
 
             <label class="wide">
               Timing and availability
-              <textarea name="Timing and availability" rows="3" placeholder="Preferred dates, travel plans, or scheduling restrictions."></textarea>
+              <textarea name="timing" rows="3" placeholder="Preferred dates, travel plans, or scheduling restrictions."></textarea>
             </label>
 
             <label class="wide">
               Reference image *
               <input type="file" name="attachment" accept="image/png,image/jpeg,image/jpg,image/webp,.pdf" required>
-              <small class="attachment-note">Maximum total upload size: 10 MB. JPG, PNG, WEBP, or PDF.</small>
+              <small class="attachment-note">Maximum upload size: 10 MB. JPG, PNG, WEBP, or PDF.</small>
             </label>
 
             <label class="consent">
-              <input type="checkbox" name="Deposit acknowledgment" value="Acknowledged" required>
+              <input type="checkbox" name="deposit" value="Acknowledged" required>
               <span>I understand that approved appointments require a $500 deposit and that submitting this form does not confirm an appointment.</span>
             </label>
 
