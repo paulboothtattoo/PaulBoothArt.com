@@ -26,6 +26,12 @@ window.PB_ART_CONTENT = {
       "image": "https://i.ytimg.com/vi/PNu_s3zTuwQ/hqdefault.jpg"
     },
     {
+      "title": "Music",
+      "label": "Sound / Composition / Atmosphere",
+      "href": "#music",
+      "image": "content/images/Guitar-2-copy.jpg"
+    },
+    {
       "title": "3D Design",
       "label": "Sculpture / Objects / Digital Forms",
       "href": "#objects",
