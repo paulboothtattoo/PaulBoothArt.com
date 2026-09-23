@@ -919,6 +919,7 @@
 
       .tattoo-contact-form .wide,
       .tattoo-contact-form .consent,
+      .tattoo-contact-form .form-privacy-note,
       .tattoo-contact-form button {
         grid-column: 1 !important;
       }
@@ -934,6 +935,23 @@
       letter-spacing: .04em !important;
       line-height: 1.5 !important;
       text-transform: none !important;
+    }
+
+    .tattoo-contact-form .form-privacy-note {
+      grid-column: 1 / -1 !important;
+      margin: 0 !important;
+      color: rgba(227, 211, 189, .56) !important;
+      font-family: "Oxanium", sans-serif !important;
+      font-size: 10px !important;
+      font-weight: 400 !important;
+      letter-spacing: .04em !important;
+      line-height: 1.6 !important;
+      text-transform: none !important;
+    }
+
+    .tattoo-contact-form .form-privacy-note a {
+      color: rgba(227, 211, 189, .8) !important;
+      text-decoration: underline !important;
     }
 
 
@@ -1503,7 +1521,7 @@
     <section id="contact" class="signal section-shell reveal"><div><span class="eyebrow">Contact Channel</span><h2>Enter the Conversation</h2><p>Original artwork, exhibitions, tattoo projects, licensing, press, and collaborations.</p></div><div class="signal-actions"><a href="mailto:lastritestattoo@gmail.com" class="secondary-button">Email Last Rites <span>&rarr;</span></a><a href="https://www.instagram.com/paulbooth/" target="_blank" rel="noopener noreferrer" class="secondary-button">Instagram <span>&#8599;</span></a><a href="https://www.youtube.com/@paulboothart" target="_blank" rel="noopener noreferrer" class="secondary-button">YouTube <span>&#8599;</span></a></div></section>
   </main>
 
-  <footer class="site-footer section-shell"><div class="footer-brand"><span class="mini-brand-mark">PB</span><div><strong>PAULBOOTHART.COM</strong><p>Fine art. Tattoo legacy. Dark surrealism.</p></div></div><div class="footer-links"><div><span>Collections</span><a href="#fine-art">Fine Arts</a><a href="#tattoo-art">Tattoo Art</a><a href="#video-art">Video Art</a><a href="#music">Music</a><a href="#objects">Objects</a></div><div><span>Information</span><a href="#about">About</a><a href="#appointment">Appointments</a><a href="#contact">Contact</a></div><div><span>Sister Site</span><a href="https://paulbooth.ai/">PaulBooth.ai</a></div></div><div class="footer-bottom"><span>&copy; <span id="year"></span> Paul Booth. All rights reserved.</span><span>PaulBoothArt.com</span></div></footer>
+  <footer class="site-footer section-shell"><div class="footer-brand"><span class="mini-brand-mark">PB</span><div><strong>PAULBOOTHART.COM</strong><p>Fine art. Tattoo legacy. Dark surrealism.</p></div></div><div class="footer-links"><div><span>Collections</span><a href="#fine-art">Fine Arts</a><a href="#tattoo-art">Tattoo Art</a><a href="#video-art">Video Art</a><a href="#music">Music</a><a href="#objects">Objects</a></div><div><span>Information</span><a href="#about">About</a><a href="#appointment">Appointments</a><a href="#contact">Contact</a></div><div><span>Sister Site</span><a href="https://paulbooth.ai/">PaulBooth.ai</a></div></div><div class="footer-bottom"><span>&copy; <span id="year"></span> Paul Booth. All rights reserved.</span><span><a href="/privacy/">Privacy</a> &middot; PaulBoothArt.com</span></div></footer>
 
   <dialog class="project-dialog" id="project-dialog">
     <button class="dialog-close" type="button" aria-label="Close artwork"></button>
@@ -1600,6 +1618,12 @@
               <input type="checkbox" name="deposit" value="Acknowledged" required>
               <span>I understand that approved appointments require a $500 deposit and that submitting this form does not confirm an appointment.</span>
             </label>
+
+            <p class="form-privacy-note">
+              Your details and reference image are emailed to Paul to evaluate the
+              project. They are not published or shared. See the
+              <a href="/privacy/">Privacy Policy</a>.
+            </p>
 
             <button class="primary-button appointment-cta" type="submit">
               Send tattoo inquiry <span>&rarr;</span>

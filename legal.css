@@ -1,0 +1,112 @@
+/* Shared styling for the Privacy page.
+   Standalone rather than reusing styles.css, which is 50KB of layout for
+   the single-page archive and carries none of these needs. Tokens below
+   mirror the :root variables in styles.css. */
+
+:root {
+  --black: #050505;
+  --panel: #0b0b0b;
+  --ivory: #e8e1d3;
+  --muted: #8d8a83;
+  --red: #68120f;
+  --red-bright: #a3261e;
+  --red-light: #bb4a41;
+  --line: rgba(232, 225, 211, .16);
+  --font-display: "Cinzel Decorative", "Times New Roman", serif;
+  --font-body: "Cormorant Garamond", Georgia, serif;
+  --font-tech: "Oxanium", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 50% -10%, rgba(104, 18, 15, .26), transparent 42%),
+    var(--black);
+  color: var(--ivory);
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--red-light); text-decoration: none; }
+a:hover, a:focus-visible { color: var(--ivory); text-decoration: underline; }
+
+.legal {
+  width: min(760px, calc(100% - 44px));
+  margin-inline: auto;
+  padding: clamp(38px, 7vw, 80px) 0 clamp(56px, 9vw, 110px);
+}
+
+.legal-back {
+  display: inline-block;
+  margin-bottom: clamp(28px, 5vw, 52px);
+  font-family: var(--font-tech);
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.legal-back:hover { color: var(--red-light); text-decoration: none; }
+
+.legal h1 {
+  margin: 0 0 10px;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(26px, 4.4vw, 44px);
+  line-height: 1.2;
+  letter-spacing: .02em;
+}
+
+.legal-updated {
+  margin: 0 0 clamp(26px, 4vw, 40px);
+  font-family: var(--font-tech);
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.legal-lede {
+  padding-bottom: 26px;
+  border-bottom: 1px solid var(--line);
+  color: #cec7b9;
+  font-size: clamp(19px, 1.6vw, 23px);
+}
+
+.legal h2 {
+  margin: clamp(34px, 5vw, 52px) 0 12px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(16px, 1.9vw, 21px);
+  letter-spacing: .04em;
+  color: var(--ivory);
+}
+
+.legal p, .legal li { color: #a9a49a; }
+.legal ul { padding-left: 20px; }
+.legal li { margin-bottom: 10px; }
+
+.legal code {
+  padding: 2px 6px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  font-family: var(--font-tech);
+  font-size: .8em;
+  color: var(--red-light);
+  word-break: break-word;
+}
+
+.legal-footer {
+  margin-top: clamp(46px, 7vw, 76px);
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-tech);
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
